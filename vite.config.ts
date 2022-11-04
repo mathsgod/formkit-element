@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/components/index.ts',
-      name: 'FormKitElement'
+      name: 'FormkitElement'
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

@@ -1,7 +1,7 @@
 {
-  "name": "form-kit-element",
+  "name": "formkit-element",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -23,7 +23,7 @@
   "files": [
     "dist"
   ],
-  "main": "dist/form-kit-element.umd.cjs",
-  "module": "dist/form-kit-element.js"
+  "main": "dist/formkit-element.umd.cjs",
+  "module": "dist/formkit-element.js"
 
 }
