@@ -3,6 +3,10 @@
 <a href="https://element-plus.org/">Element plus</a> for <a href="https://formkit.com/">FormKit.</a>
 
 
+## Preview
+
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element-plus/preview/ui.png" alt="preview" width="500" />
+
 ## Setup
 
 Create formkit.config.ts
