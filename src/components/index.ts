@@ -57,7 +57,6 @@ export const elForm: any = {
 export const elFormInput: any = {
     type: "input",
     component: FormInput,
-    props: ["placeholder", "clearable"]
 }
 
 export const elFormDatePicker: any = {
