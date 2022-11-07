@@ -1,22 +1,17 @@
 <script setup>
-import { defineProps, ref, watch } from "vue"
+import { ref, watch } from "vue"
 
 const props = defineProps({
     context: Object,
 })
 
-//console.log(props);
-
 let value = ref(null);
 
 watch(() => value.value, (val) => {
-    props.context.node.input(value);
+    props.context.node.input(val);
 })
-
-
 </script>
 
 <template>
     <el-input v-model="value" :clearable="props.context.clearable"></el-input>
-
 </template>

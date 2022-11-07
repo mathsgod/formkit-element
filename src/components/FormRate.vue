@@ -13,6 +13,12 @@ watch(() => value.value, (val) => {
     props.context.node.input(value);
 })
 
+let required = props.context.node.props.parsedRules.some(rule => {
+    if (rule.name === "required") {
+        return true;
+    }
+});
+
 let error = ref(null);
 
 function showErrorMessage(messages) {

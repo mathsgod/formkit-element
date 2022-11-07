@@ -1,29 +1,19 @@
 <script setup>
-import { ref, defineEmits } from "vue"
+import { ref } from "vue"
+import { Check } from "@element-plus/icons-vue"
 
 const props = defineProps({
     context: Object,
 });
-
-
-let context = props.context;
 
 const f = ref(null);
 const form = ref(null);
 const onSubmit = async () => {
     f.value.node.submit();
 }
-
-
 const onSubmitForm = () => {
-    console.log("onSubmitForm")
-    //context.emit("submit");
-
-    console.log(context);
-
-
+    props.context.node.emit("submit");
 }
-
 </script>
 
 <template>
@@ -31,9 +21,8 @@ const onSubmitForm = () => {
         <FormKit type="form" ref="f" v-model="props.context.node.value" :actions="false" @submit="onSubmitForm">
             <el-form label-position="left" ref="form" label-width="auto">
                 <slot></slot>
-
             </el-form>
         </FormKit>
-        <el-button type="primary" @click="onSubmit">Submit</el-button>
+        <el-button type="primary" @click="onSubmit" :icon="Check">Submit</el-button>
     </div>
 </template>

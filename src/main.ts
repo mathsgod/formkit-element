@@ -9,9 +9,21 @@ import { plugin, defaultConfig, createInput } from '@formkit/vue'
 import '@formkit/themes/genesis'
 
 
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
+
+
 import * as Components from './components'
 
 const app = createApp(App);
+
+
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+    app.component(key, component)
+}
+
+
+
 app.use(ElementPlus)
 app.use(plugin, defaultConfig({
 
@@ -22,7 +34,7 @@ app.use(plugin, defaultConfig({
             component: ElInput,
             props: ["clearable"]
         },
-        
+
     }
 }))
 

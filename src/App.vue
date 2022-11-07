@@ -1,7 +1,8 @@
 <script setup>
 import { createInput } from '@formkit/vue'
 import myinput from './components/Input.vue'
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import { getNode } from '@formkit/core';
 
 
 const input_test = createInput(myinput);
@@ -68,9 +69,20 @@ const schema = [
 ];
 
 
-let onSubmit = () => {
-  console.log("onSubmit", JSON.stringify(data.value));
-}
+const elf = ref({});
+
+/* elf.value.node.on("submit", function () {
+  console.log('node submit');
+})
+ */
+onMounted(() => {
+  getNode("elform").on("submit", function () {
+    console.log('node submit', data.value);
+
+  });
+
+})
+
 
 </script>
 
@@ -90,7 +102,7 @@ let onSubmit = () => {
       <FormKitSchema :schema="schema" />
     </FormKit -->
 
-    <FormKit type="elForm" v-model="data" @submit="onSubmit">
+    <FormKit type="elForm" v-model="data" ref="elf" id="elform">
 
       <FormKit type="text" label="test" name="input1" validation="required" />
       <!-- FormKit type="elFormInput" label="input2" name="input2" validation="required" validation-visibility="dirty" /-->
