@@ -26,5 +26,6 @@
     "dist"
   ],
   "main": "dist/formkit-element.umd.cjs",
-  "module": "dist/formkit-element.js"
+  "module": "dist/formkit-element.js",
+  "license": "MIT"
 }
