@@ -12,6 +12,8 @@ watch(() => value.value, (val) => {
 })
 
 props.context.classes.inner = "";
+
+//slot doesn't work
 </script>
 
 <template>
