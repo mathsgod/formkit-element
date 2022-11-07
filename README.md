@@ -76,7 +76,7 @@ export default config
 
 #### el-form-item preivew
 
-<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/form-item.png" alt="preview" width="500" />
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/formItem.png" alt="preview" width="500" />
 
 
 ```typescript
