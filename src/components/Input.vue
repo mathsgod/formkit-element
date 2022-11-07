@@ -10,6 +10,8 @@ let value = ref(null);
 watch(() => value.value, (val) => {
     props.context.node.input(val);
 })
+console.log(props.context.classes);
+props.context.classes.inner = "";
 </script>
 
 <template>

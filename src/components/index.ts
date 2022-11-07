@@ -17,7 +17,7 @@ import FormColorPicker from './FormColorPicker.vue'
 import { createInput } from '@formkit/vue'
 
 export const elInput = createInput(Input, {
-    props: ["clearable"]
+    props: ["clearable"],
 })
 
 export const elDatePicker: any = {
@@ -50,7 +50,7 @@ export const elFormTextarea: any = {
 export const elFormSelect: any = {
     type: "input",
     component: FormSelect,
-    props: ["clearable", "options", "placeholder"]
+    props: ["clearable", "options", "placeholder", "filterable", "multiple"]
 }
 
 export const elFormCheckbox: any = {

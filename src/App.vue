@@ -101,6 +101,7 @@ onMounted(() => {
     </FormKit -->
 
     <FormKit type="elForm" v-model="data" ref="elf" id="elform">
+      <FormKit type="elInput" name="input4" label="test" validation="required" />
 
       <FormKit type="text" label="test" name="input1" validation="required" />
       <!-- FormKit type="elFormInput" label="input2" name="input2" validation="required" validation-visibility="dirty" /-->
@@ -116,7 +117,7 @@ onMounted(() => {
         saturn: 'Saturn',
         uranus: 'Uranus',
         neptune: 'Neptune',
-      }" validation="required" clearable placeholder="select placeholder" />
+      }" validation="required" clearable placeholder="select placeholder" filterable multiple />
 
       <FormKit type="elFormCheckbox" label="Checkbox1" name="cb1" validation="required" />
 

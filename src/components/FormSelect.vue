@@ -48,7 +48,8 @@ context.node.on("message-removed", message => {
 
 <template>
     <el-form-item :label="context.label" :error="error" :required="required">
-        <el-select v-model="value" :clearable="props.context.clearable" :placeholder="context.placeholder">
+        <el-select v-model="value" :filterable="props.context.filterable" :multiple="context.node.props.multiple"
+            :clearable="props.context.clearable" :placeholder="context.placeholder">
             <el-option v-for="(label, value) in context.options" :key="value" :label="label" :value="value"></el-option>
         </el-select>
     </el-form-item>
