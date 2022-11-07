@@ -5,7 +5,7 @@
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/preview/ui.png" alt="preview" width="500" />
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/ui.png" alt="preview" width="500" />
 
 ## Setup
 
