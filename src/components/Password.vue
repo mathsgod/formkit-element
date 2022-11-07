@@ -12,10 +12,12 @@ watch(() => value.value, (val) => {
 })
 
 props.context.classes.inner = "";
+
+console.log(props.context);
 </script>
 
 <template>
-    <el-select v-model="value" v-bind="context.attrs">
-        <el-option v-for="(label, value) in context.options" :key="value" :label="label" :value="value"></el-option>
-    </el-select>
+    <el-input v-model="value" :clearable="props.context.clearable" @focusout="context.handlers.blur" type="password"
+        v-bind="context.attrs"></el-input>
+
 </template>

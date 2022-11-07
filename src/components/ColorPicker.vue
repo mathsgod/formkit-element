@@ -15,7 +15,5 @@ props.context.classes.inner = "";
 </script>
 
 <template>
-    <el-select v-model="value" v-bind="context.attrs">
-        <el-option v-for="(label, value) in context.options" :key="value" :label="label" :value="value"></el-option>
-    </el-select>
+    <el-color-picker v-model="value" />
 </template>

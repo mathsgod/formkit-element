@@ -15,6 +15,6 @@ props.context.classes.inner = "";
 </script>
 
 <template>
-    <el-switch v-model="value" />
+    <el-switch v-model="value" v-bind="context.attrs" />
 
 </template>

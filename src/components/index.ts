@@ -1,13 +1,17 @@
 import Input from './Input.vue'
+import Textarea from './Textarea.vue'
 import Rate from './Rate.vue'
 import Select from "./Select.vue"
 import Switch from "./Switch.vue"
+import DatePicker from "./DatePicker.vue"
+import TimePicker from "./TimePicker.vue"
+import ColorPicker from "./ColorPicker.vue"
+import Password from "./Password.vue"
 
 import FormInput from './FormInput.vue'
 import FormDatePicker from './FormDatePicker.vue'
 import FormTextarea from './FormTextarea.vue'
 import Form from './Form.vue'
-import DatePicker from './DatePicker.vue'
 import FormTimePicker from './FormTimePicker.vue'
 import FormSelect from './FormSelect.vue'
 import FormCheckbox from './FormCheckbox.vue'
@@ -18,6 +22,7 @@ import FormRadioGroup from './FormRadioGroup.vue'
 import FormSlider from './FormSlider.vue'
 import FormColorPicker from './FormColorPicker.vue'
 
+
 import { createInput } from '@formkit/vue'
 
 export const elRate = createInput(Rate, {
@@ -25,20 +30,28 @@ export const elRate = createInput(Rate, {
 });
 
 export const elSelect = createInput(Select, {
-    props: ["clearable", "options", "placeholder", "filterable", "multiple"]
+    props: ["options"]
 });
 
-export const elSwitch = createInput(Switch, {
-});
+export const elSwitch = createInput(Switch);
+export const elInput = createInput(Input)
+export const elTextarea = createInput(Textarea)
 
-export const elInput = createInput(Input, {
-    props: ["clearable"],
+
+
+export const elPassword = createInput(Password)
+
+export const elDatePicker = createInput(DatePicker, {
+    props: ["clearable", "placeholder"]
 })
 
-export const elDatePicker: any = {
-    type: "input",
-    component: DatePicker,
-}
+export const elTimePicker = createInput(TimePicker, {
+    props: ["clearable", "placeholder"]
+})
+
+export const elColorPicker = createInput(ColorPicker, {
+
+})
 
 export const elForm: any = {
     type: "input",
