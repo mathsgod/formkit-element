@@ -4,10 +4,6 @@ import myinput from './components/Input.vue'
 import { onMounted, ref } from "vue";
 import { getNode } from '@formkit/core';
 
-
-const input_test = createInput(myinput);
-
-const values = ref({})
 const data = ref({
 
 });
@@ -15,59 +11,6 @@ const data = ref({
 const data2 = ref({
 
 });
-const schema2 = [
-  {
-    $formkit: "elInput",
-    label: "username",
-    help: "help",
-    name: "username",
-    validation: "required",
-    "validation-visibility": "dirty",
-    clearable: true
-  },
-  {
-    $formkit: "elDatePicker",
-    label: "Date",
-    help: "help date",
-    name: "date",
-    validation: "required",
-    "validation-visibility": "dirty"
-  },
-
-  {
-    $formkit: "elFormInput",
-    label: "Form input1",
-    name: "input1",
-    validation: "required|email",
-    "validation-visibility": "dirty"
-  },
-  {
-    $formkit: "elFormDatePicker",
-    label: "Date picker",
-    name: "date2"
-  },
-  {
-    $formkit: "elFormTextarea",
-    label: "Textarea",
-    name: "input2"
-  }
-]
-
-const schema = [
-
-  {
-    $formkit: "elFormInput",
-    label: "Form input1",
-    name: "input1",
-    validation: "required|email",
-    "validation-visibility": "dirty"
-  }, {
-    $formkit: "elFormDatePicker",
-    label: "Date picker",
-    name: "date2"
-  }
-];
-
 
 const elf = ref({});
 
@@ -111,6 +54,8 @@ const querySearch = (queryString, cb) => {
 
 <template>
   <div>
+    
+    <el-divider></el-divider>
 
     <FormKit type="form" v-model="data">
 
