@@ -54,12 +54,12 @@ const querySearch = (queryString, cb) => {
 
 <template>
   <div>
-    
+
     <el-divider></el-divider>
 
     <FormKit type="form" v-model="data">
 
-      <FormKit type="elInput" name="input4" label="elInput" validation="required" />
+      <FormKit type="elInput" name="input4" label="elInput" validation="required" help="this is input help" />
 
       <FormKit type="elInput" name="input5" label="elInput (placeholder)" validation="required"
         placeholder="this is a placeholder" clearable />
@@ -141,7 +141,7 @@ const querySearch = (queryString, cb) => {
     <FormKit type="elForm" label-width="auto" submit-label="OK" v-model="data2">
 
       <FormKit type="elFormInput" label="elFormInput" name="form_input_1" validation="required"
-        placeholder="this is el-form-input" clearable />
+        placeholder="this is el-form-input" clearable help="this is input help" />
       <FormKit type="elFormPassword" label="elFormPassword" name="form_password" validation="required" clearable
         show-password />
 

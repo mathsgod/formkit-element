@@ -49,7 +49,8 @@ context.node.on("message-removed", message => {
 <template>
     <el-form-item :label="context.label" :error="error">
         <el-radio-group v-model="value">
-            <el-radio v-for="(text, value) in context.options" :label="value">{{text}}</el-radio>
+            <el-radio v-for="(text, value) in context.options" :label="value">{{ text }}</el-radio>
         </el-radio-group>
+        <div v-if="context.help" :class="context.classes.help" v-text="context.help" />
     </el-form-item>
 </template>

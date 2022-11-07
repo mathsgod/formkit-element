@@ -50,5 +50,6 @@ context.node.on("message-removed", message => {
     <el-form-item :label="context.label" :error="error" :required="required">
         <el-time-picker v-model="value" @focusout="context.handlers.blur" v-bind="context.attrs"
             value-format="HH:mm:ss" />
+        <div v-if="context.help" :class="context.classes.help" v-text="context.help" />
     </el-form-item>
 </template>

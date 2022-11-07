@@ -43,5 +43,6 @@ context.node.on("message-removed", message => {
 <template>
     <el-form-item :label="context.label" :error="error">
         <el-slider v-model="value" v-bind="context.attrs" />
+        <div v-if="context.help" :class="context.classes.help" v-text="context.help" />
     </el-form-item>
 </template>
