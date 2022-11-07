@@ -80,15 +80,10 @@ onMounted(() => {
     console.log('node submit', data.value);
   });
 })
-
-
 </script>
-
-
 
 <template>
   <div>
-
 
     <FormKit type="elForm" v-model="data" ref="elf" id="elform">
 
@@ -97,10 +92,8 @@ onMounted(() => {
       <FormKit type="elInput" name="input5" label="elInput (placeholder)" validation="required"
         placeholder="this is a placeholder" clearable />
 
-
       <FormKit type="elPassword" name="password1" label="elPassword" validation="required" show-password clearable
         placeholder="this is a password" />
-
 
       <FormKit type="elTextarea" name="textarea" label="elTextarea" placeholder="this is a textarea" />
 
@@ -128,15 +121,11 @@ onMounted(() => {
 
       <FormKit type="elRate" name="rate2" label="elRate" />
 
-
       <FormKit type="elSwitch" name="switch3" label="elSwitch" />
-
 
       <FormKit type="elDatePicker" name="date3" label="elDatePicker" />
       <FormKit type="elTimePicker" name="time2" label="elTimePicker" />
-
       <FormKit type="elColorPicker" name="color12" label="elColorPicker" />
-
 
       <el-divider>Form Item</el-divider>
 
