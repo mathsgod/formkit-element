@@ -15,5 +15,6 @@ props.context.classes.inner = "";
 </script>
 
 <template>
-    <el-rate v-model="value" :size="props.context.size" />
+    <el-switch v-model="value" />
+
 </template>

@@ -119,6 +119,9 @@ onMounted(() => {
       <FormKit type="elRate" name="rate2" label="elRate" />
 
 
+      <FormKit type="elSwitch" name="switch3" label="elSwitch" />
+
+
       <!-- FormKit type="elFormInput" label="input2" name="input2" validation="required" validation-visibility="dirty" /-->
       <FormKit type="elFormInput" label="input3" name="input3" validation="required" placeholder="testing3" clearable />
 

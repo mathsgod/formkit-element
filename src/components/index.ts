@@ -1,6 +1,7 @@
 import Input from './Input.vue'
 import Rate from './Rate.vue'
 import Select from "./Select.vue"
+import Switch from "./Switch.vue"
 
 import FormInput from './FormInput.vue'
 import FormDatePicker from './FormDatePicker.vue'
@@ -25,7 +26,9 @@ export const elRate = createInput(Rate, {
 
 export const elSelect = createInput(Select, {
     props: ["clearable", "options", "placeholder", "filterable", "multiple"]
+});
 
+export const elSwitch = createInput(Switch, {
 });
 
 export const elInput = createInput(Input, {
