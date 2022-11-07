@@ -14,10 +14,12 @@ import TimeSelect from "./TimeSelect.vue"
 import RadioGroup from "./RadioGroup.vue"
 
 import FormInput from './FormInput.vue'
+import FormPassword from './FormPassword.vue'
 import FormDatePicker from './FormDatePicker.vue'
 import FormTextarea from './FormTextarea.vue'
 import Form from './Form.vue'
 import FormTimePicker from './FormTimePicker.vue'
+import FormTimeSelect from './FormTimeSelect.vue'
 import FormSelect from './FormSelect.vue'
 import FormCheckbox from './FormCheckbox.vue'
 import FormRate from './FormRate.vue'
@@ -51,7 +53,12 @@ export const elTimeSelect = createInput(TimeSelect);
 export const elForm: any = {
     type: "input",
     component: Form,
-    props: ["submit"]
+    props: ["submitLabel"]
+}
+
+export const elFormPassword: any = {
+    type: "input",
+    component: FormPassword,
 }
 
 export const elFormInput: any = {
@@ -94,6 +101,11 @@ export const elFormSwitch: any = {
 export const elFormTimePicker: any = {
     type: "input",
     component: FormTimePicker,
+}
+
+export const elFormTimeSelect: any = {
+    type: "input",
+    component: FormTimeSelect,
 }
 
 export const elFormInputNumber: any = {

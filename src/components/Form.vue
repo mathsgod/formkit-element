@@ -14,15 +14,22 @@ const onSubmit = async () => {
 const onSubmitForm = () => {
     props.context.node.emit("submit");
 }
+
+
+
+let submit_label = props.context.submitLabel ?? 'Submit';
+
+
+
 </script>
 
 <template>
     <div>
         <FormKit type="form" ref="f" v-model="props.context.node.value" :actions="false" @submit="onSubmitForm">
-            <el-form label-position="left" ref="form" label-width="auto">
+            <el-form ref="form" v-bind="props.context.attrs">
                 <slot></slot>
             </el-form>
         </FormKit>
-        <el-button type="primary" @click="onSubmit" :icon="Check">Submit</el-button>
+        <el-button type="primary" @click="onSubmit" :icon="Check">{{ submit_label }}</el-button>
     </div>
 </template>

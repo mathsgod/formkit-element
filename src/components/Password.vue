@@ -13,7 +13,7 @@ watch(() => value.value, (val) => {
 
 props.context.classes.inner = "";
 
-console.log(props.context);
+
 </script>
 
 <template>

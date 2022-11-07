@@ -9,12 +9,12 @@ const input_test = createInput(myinput);
 
 const values = ref({})
 const data = ref({
-  input1: "",
-  input2: "input2",
-  input3: "",
-  //  radio1: "1",
+
 });
 
+const data2 = ref({
+
+});
 const schema2 = [
   {
     $formkit: "elInput",
@@ -76,17 +76,16 @@ const elf = ref({});
 })
  */
 onMounted(() => {
-  getNode("elform").on("submit", function () {
-    console.log('node submit', data.value);
-  });
+  /*   getNode("elform").on("submit", function () {
+      console.log('node submit', data.value);
+    }); */
 })
 </script>
 
 <template>
   <div>
 
-    <FormKit type="elForm" v-model="data" ref="elf" id="elform">
-
+    <FormKit type="form" v-model="data">
       <FormKit type="elInput" name="input4" label="elInput" validation="required" />
 
       <FormKit type="elInput" name="input5" label="elInput (placeholder)" validation="required"
@@ -124,13 +123,17 @@ onMounted(() => {
       <FormKit type="elSwitch" name="switch3" label="elSwitch" />
 
       <FormKit type="elDatePicker" name="date3" label="elDatePicker" />
+
       <FormKit type="elTimePicker" name="time2" label="elTimePicker" />
+
       <FormKit type="elColorPicker" name="color12" label="elColorPicker" />
 
       <FormKit type="elInputNumber" name="inputNumber2" label="elInputNumber" />
+
       <FormKit type="elCheckbox" name="cb5" label="elCheckbox" />
 
       <FormKit type="elSlider" name="slider2" label="elSlider" />
+
       <FormKit type="elTimeSelect" name="timeSelect3" label="elTimeSelect" />
 
       <FormKit type="elRadioGroup" label="elRadioGroup" name="radio3" :options="{
@@ -144,13 +147,22 @@ onMounted(() => {
         neptune: 'Neptune',
       }" />
 
-      <el-divider>Form Item</el-divider>
-
-      <!-- FormKit type="elFormInput" label="input2" name="input2" validation="required" validation-visibility="dirty" /-->
-      <FormKit type="elFormInput" label="input3" name="input3" validation="required" placeholder="testing3" clearable />
+    </FormKit>
 
 
-      <FormKit type="elFormSelect" label="Select" name="select" :options="{
+    <pre>{{ data }}</pre>
+
+
+    <el-divider>Component with form Item</el-divider>
+
+    <FormKit type="elForm" label-width="auto" submit-label="OK" v-model="data2">
+
+      <FormKit type="elFormInput" label="elFormInput" name="form_input_1" validation="required"
+        placeholder="this is el-form-input" clearable />
+      <FormKit type="elFormPassword" label="elFormPassword" name="form_password" validation="required" clearable
+        show-password />
+
+      <FormKit type="elFormSelect" label="elFormSelect" name="select" :options="{
         mercury: 'Mercury',
         venus: 'Venus',
         earth: 'Earth',
@@ -161,14 +173,17 @@ onMounted(() => {
         neptune: 'Neptune',
       }" validation="required" clearable placeholder="select placeholder" filterable multiple />
 
-      <FormKit type="elFormCheckbox" label="Checkbox1" name="cb1" validation="required" />
+      <FormKit type="elFormCheckbox" label="elFormCheckbox" name="cb1" validation="required" />
 
-      <FormKit type="elFormRate" label="Rate" name="rate1" />
-      <FormKit type="elFormSwitch" label="Switch" name="switch1" />
-      <FormKit type="elFormTimePicker" label="Time Picker 1" name="time_picker_1" />
-      <FormKit type="elFormInputNumber" label="input nubmer 1" name="input_number_1" />
+      <FormKit type="elFormRate" label="elFormRate" name="rate1" />
+      <FormKit type="elFormSwitch" label="elFormSwitch" name="switch1" />
+      <FormKit type="elFormDatePicker" label="elFormDatePicker" name="date_picker_1" />
+      <FormKit type="elFormTimePicker" label="elFormTimePicker" name="time_picker_1" />
+      <FormKit type="elFormTimeSelect" label="elFormTimeSelect" name="time_select_1" />
 
-      <FormKit type="elFormRadioGroup" label="Radio Group" name="radio1" :options="{
+      <FormKit type="elFormInputNumber" label="elFormInputNumber" name="input_number_1" />
+
+      <FormKit type="elFormRadioGroup" label="elFormRadioGroup" name="radio1" :options="{
         mercury: 'Mercury',
         venus: 'Venus',
         earth: 'Earth',
@@ -180,18 +195,18 @@ onMounted(() => {
       }" validation="required" />
 
 
-      <FormKit type="elFormSlider" label="Slider1" name="slider1" />
-      <FormKit type="elFormSlider" label="Slider2" name="slider2" :min="100" :max="200" :step="2" />
+      <FormKit type="elFormSlider" label="elFormSlider" name="slider1" />
+      <FormKit type="elFormSlider" label="elFormSlider (with attrs)" name="slider2" :min="100" :max="200" :step="2" />
 
-      <FormKit type="elFormColorPicker" label="ColorPicker" name="color1" />
+      <FormKit type="elFormColorPicker" label="elFormColorPicker" name="color1" />
 
 
     </FormKit>
 
 
 
-    <pre>{{ data }}</pre>
 
+    <pre>{{ data2 }}</pre>
 
 
 

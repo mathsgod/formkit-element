@@ -43,10 +43,11 @@ context.node.on("message-removed", message => {
     //console.log("message removed", message);
     showErrorMessage(props.context.messages);
 })
+
 </script>
 
 <template>
-    <el-form-item :label="props.context.label" :required="required">
-        <el-date-picker v-model="value" v-bind="context.attrs" value-format="YYYY-DD-MM" />
+    <el-form-item :label="context.label" :error="error" :required="required">
+        <el-time-select v-model="value" v-bind="context.attrs" />
     </el-form-item>
 </template>
