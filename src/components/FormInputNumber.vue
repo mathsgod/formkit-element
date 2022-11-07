@@ -48,6 +48,6 @@ context.node.on("message-removed", message => {
 
 <template>
     <el-form-item :label="context.label" :error="error" :required="required">
-        <el-input-number v-model="value" @focusout="context.handlers.blur" />
+        <el-input-number v-model="value" @focusout="context.handlers.blur" v-bind="context.attrs" />
     </el-form-item>
 </template>

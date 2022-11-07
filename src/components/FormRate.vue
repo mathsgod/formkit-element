@@ -48,6 +48,6 @@ context.node.on("message-removed", message => {
 
 <template>
     <el-form-item :label="context.label" :error="error" :required="required">
-        <el-rate v-model="value" :size="props.context.size" />
+        <el-rate v-model="value" v-bind="context.attrs" />
     </el-form-item>
 </template>

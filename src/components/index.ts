@@ -25,33 +25,17 @@ import FormColorPicker from './FormColorPicker.vue'
 
 import { createInput } from '@formkit/vue'
 
-export const elRate = createInput(Rate, {
-    props: ["placeholder", "clearable"]
-});
-
+export const elRate = createInput(Rate);
 export const elSelect = createInput(Select, {
     props: ["options"]
 });
-
 export const elSwitch = createInput(Switch);
 export const elInput = createInput(Input)
 export const elTextarea = createInput(Textarea)
-
-
-
 export const elPassword = createInput(Password)
-
-export const elDatePicker = createInput(DatePicker, {
-    props: ["clearable", "placeholder"]
-})
-
-export const elTimePicker = createInput(TimePicker, {
-    props: ["clearable", "placeholder"]
-})
-
-export const elColorPicker = createInput(ColorPicker, {
-
-})
+export const elDatePicker = createInput(DatePicker)
+export const elTimePicker = createInput(TimePicker)
+export const elColorPicker = createInput(ColorPicker)
 
 export const elForm: any = {
     type: "input",
@@ -78,7 +62,7 @@ export const elFormTextarea: any = {
 export const elFormSelect: any = {
     type: "input",
     component: FormSelect,
-    props: ["clearable", "options", "placeholder", "filterable", "multiple"]
+    props: ["options"]
 }
 
 export const elFormCheckbox: any = {
@@ -90,25 +74,21 @@ export const elFormCheckbox: any = {
 export const elFormRate: any = {
     type: "input",
     component: FormRate,
-    props: ["size"]
 }
 
 export const elFormSwitch: any = {
     type: "input",
     component: FormSwitch,
-    props: ["size"]
 }
 
 export const elFormTimePicker: any = {
     type: "input",
     component: FormTimePicker,
-    props: ["placeholder"]
 }
 
 export const elFormInputNumber: any = {
     type: "input",
     component: FormInputNumber,
-    props: ["placeholder", "clearable"]
 }
 
 export const elFormRadioGroup: any = {
@@ -120,7 +100,6 @@ export const elFormRadioGroup: any = {
 export const elFormSlider: any = {
     type: "input",
     component: FormSlider,
-    props: ["min", "max", "step"]
 }
 
 export const elFormColorPicker: any = {

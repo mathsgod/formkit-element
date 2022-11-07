@@ -42,6 +42,6 @@ context.node.on("message-removed", message => {
 
 <template>
     <el-form-item :label="context.label">
-        <el-switch v-model="value" />
+        <el-switch v-model="value" v-bind="context.attrs" />
     </el-form-item>
 </template>

@@ -15,6 +15,5 @@ props.context.classes.inner = "";
 </script>
 
 <template>
-    <el-time-picker v-model="value" @focusout="context.handlers.blur" :placeholder="context.placeholder"
-        value-format="HH:mm:ss" />
+    <el-time-picker v-model="value" @focusout="context.handlers.blur" v-bind="context.attrs" value-format="HH:mm:ss" />
 </template>

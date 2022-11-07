@@ -15,5 +15,5 @@ props.context.classes.inner = "";
 </script>
 
 <template>
-    <el-rate v-model="value" :size="props.context.size" />
+    <el-rate v-model="value" v-bind="context.attrs" />
 </template>

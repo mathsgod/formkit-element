@@ -42,6 +42,6 @@ context.node.on("message-removed", message => {
 
 <template>
     <el-form-item :label="context.label" :error="error">
-        <el-checkbox v-model="value" />
+        <el-checkbox v-model="value" v-bind="context.attrs" />
     </el-form-item>
 </template>

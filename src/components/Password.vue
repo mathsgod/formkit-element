@@ -17,7 +17,6 @@ console.log(props.context);
 </script>
 
 <template>
-    <el-input v-model="value" :clearable="props.context.clearable" @focusout="context.handlers.blur" type="password"
-        v-bind="context.attrs"></el-input>
+    <el-input v-model="value" @focusout="context.handlers.blur" type="password" v-bind="context.attrs" />
 
 </template>

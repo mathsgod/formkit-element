@@ -48,6 +48,6 @@ context.node.on("message-removed", message => {
 
 <template>
     <el-form-item :label="context.label" :error="error">
-        <el-color-picker v-model="value" />
+        <el-color-picker v-model="value" v-bind="context.attrs" />
     </el-form-item>
 </template>

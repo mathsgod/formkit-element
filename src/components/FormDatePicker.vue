@@ -1,5 +1,5 @@
 <script setup>
-import {  ref, watch } from "vue"
+import { ref, watch } from "vue"
 
 const props = defineProps({
     context: Object,
@@ -18,6 +18,6 @@ watch(() => value.value, (val) => {
 
 <template>
     <el-form-item :label="props.context.label" required :prop="props.context.node.name">
-        <el-date-picker v-model="value" :clearable="props.context.clearable" value-format="YYYY-DD-MM"/>
+        <el-date-picker v-model="value" v-bind="context.attrs" value-format="YYYY-DD-MM" />
     </el-form-item>
 </template>

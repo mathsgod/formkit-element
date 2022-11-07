@@ -1,5 +1,5 @@
 <script setup>
-import {  ref, watch } from "vue"
+import { ref, watch } from "vue"
 
 const props = defineProps({
     context: Object,
@@ -18,6 +18,6 @@ watch(() => value.value, (val) => {
 
 <template>
     <el-form-item :label="props.context.label" :prop="props.context.node.name">
-        <el-input v-model="value" :clearable="props.context.clearable" type="textarea"></el-input>
+        <el-input v-model="value" type="textarea" v-bind="context.attrs" />
     </el-form-item>
 </template>
