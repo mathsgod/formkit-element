@@ -17,3 +17,25 @@ const config: DefaultConfigOptions = {
 export default config
 ```
 
+## Usage
+
+### elForm submit
+
+```js
+const data=ref({})
+const form = ref({});
+onMounted(() => {
+  getNode("form1").on("submit", function () {
+    console.log('node submit', data.value);
+  });
+})
+```
+
+```html
+  <FormKit type="elForm" v-model="data" ref="form" id="form1">
+    ...   
+  </FormKit>
+```
+
+
+

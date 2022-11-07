@@ -78,9 +78,7 @@ const elf = ref({});
 onMounted(() => {
   getNode("elform").on("submit", function () {
     console.log('node submit', data.value);
-
   });
-
 })
 
 
