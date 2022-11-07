@@ -147,6 +147,12 @@ onMounted(() => {
         neptune: 'Neptune',
       }" />
 
+
+      <FormKit type="elUpload" label="elUpload" name="upload1">
+        <el-button size="small" type="primary">Click to upload</el-button>
+        <div slot="tip" class="el-upload__tip">only jpg/png files are allowed</div>
+      </FormKit>
+
     </FormKit>
 
 

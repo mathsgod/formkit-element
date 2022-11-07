@@ -12,6 +12,7 @@ import Checkbox from "./Checkbox.vue"
 import Slider from "./Slider.vue"
 import TimeSelect from "./TimeSelect.vue"
 import RadioGroup from "./RadioGroup.vue"
+import Upload from "./Upload.vue"
 
 import FormInput from './FormInput.vue'
 import FormPassword from './FormPassword.vue'
@@ -49,6 +50,7 @@ export const elInputNumber = createInput(InputNumber)
 export const elCheckbox = createInput(Checkbox);
 export const elSlider = createInput(Slider);
 export const elTimeSelect = createInput(TimeSelect);
+export const elUpload = createInput(Upload);
 
 export const elForm: any = {
     type: "input",
