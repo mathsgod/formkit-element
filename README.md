@@ -73,6 +73,80 @@ export default config
     </FormKit>
 ```
 
+
+```typescript
+ <FormKit type="elForm" v-model="data" ref="elf" id="elform">
+      <FormKit type="elFormInput" label="input3" name="input3" validation="required" placeholder="testing3" clearable />
+
+<FormKit type="elFormSelect" label="Select" name="select" :options="{
+        mercury: 'Mercury',
+        venus: 'Venus',
+        earth: 'Earth',
+        mars: 'Mars',
+        jupiter: 'Jupiter',
+        saturn: 'Saturn',
+        uranus: 'Uranus',
+        neptune: 'Neptune',
+      }" validation="required" clearable placeholder="select placeholder" filterable multiple />
+
+      <FormKit type="elFormCheckbox" label="Checkbox1" name="cb1" validation="required" />
+
+      <FormKit type="elFormRate" label="Rate" name="rate1" />
+      <FormKit type="elFormSwitch" label="Switch" name="switch1" />
+      <FormKit type="elFormTimePicker" label="Time Picker 1" name="time_picker_1" />
+      <FormKit type="elFormInputNumber" label="input nubmer 1" name="input_number_1" />
+
+      <FormKit type="elFormRadioGroup" label="Radio Group" name="radio1" :options="{
+        mercury: 'Mercury',
+        venus: 'Venus',
+        earth: 'Earth',
+        mars: 'Mars',
+        jupiter: 'Jupiter',
+        saturn: 'Saturn',
+        uranus: 'Uranus',
+        neptune: 'Neptune',
+      }" validation="required" />
+
+
+      <FormKit type="elFormSlider" label="Slider1" name="slider1" />
+      <FormKit type="elFormSlider" label="Slider2" name="slider2" :min="100" :max="200" :step="2" />
+
+      <FormKit type="elFormColorPicker" label="ColorPicker" name="color1" />
+
+
+    </FormKit>
+```
+
+
+### Supported type
+- elInput
+- elPassword
+- elTextarea 
+- elRate
+- elSelect
+- elSwitch
+- elDatePicker
+- elTimePicker
+- elColorPicker
+- elInputNumber
+- elCheckbox
+- elSlider
+- elTimeSelect
+- elRadioGroup
+- elForm
+
+#### Component with el-form-item
+- elFormInput
+- elFormDatePicker
+- elFormTextarea
+- elFormTimePicker
+- elFormSelect
+- elFormCheckbox
+- elFormRate
+- elFormInputNumber
+- elFormSlider
+- elFormColorPicker
+
 ### elForm submit
 
 ```js
