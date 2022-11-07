@@ -143,7 +143,7 @@ const querySearch = (queryString, cb) => {
       <FormKit type="elFormInput" label="elFormInput" name="form_input_1" validation="required"
         placeholder="this is el-form-input" clearable help="this is input help" />
       <FormKit type="elFormPassword" label="elFormPassword" name="form_password" validation="required" clearable
-        show-password />
+        show-password help="password help" />
 
       <FormKit type="elFormSelect" label="elFormSelect" name="select" :options="{
         mercury: 'Mercury',
