@@ -124,33 +124,39 @@ export default config
 
 
 ### Supported type
+- elAutocomplete
+- elCheckbox
+- elColorPicker
+- elDatePicker
 - elInput
+- elInputNumber
 - elPassword
-- elTextarea 
+- elRadioGroup
 - elRate
 - elSelect
-- elSwitch
-- elDatePicker
-- elTimePicker
-- elColorPicker
-- elInputNumber
-- elCheckbox
 - elSlider
+- elTextarea 
+- elSwitch
+- elTimePicker
 - elTimeSelect
-- elRadioGroup
+- elUpload (not working yet)
 - elForm
 
 #### Component with el-form-item
-- elFormInput
+- elFormCheckbox
+- elFormColorPicker
 - elFormDatePicker
+- elFormInput
+- elFormInputNumber
+- elFormPassword
+- elFormRadioGroup
+- elFormRate
+- elFormSelect
+- elFormSwitch
 - elFormTextarea
 - elFormTimePicker
-- elFormSelect
-- elFormCheckbox
-- elFormRate
-- elFormInputNumber
+- elFormTimeSelect
 - elFormSlider
-- elFormColorPicker
 
 ### elForm submit
 
