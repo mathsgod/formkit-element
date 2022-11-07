@@ -74,6 +74,11 @@ export default config
 ```
 
 
+#### el-form-item preivew
+
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/form-item.png" alt="preview" width="500" />
+
+
 ```typescript
  <FormKit type="elForm" v-model="data" ref="elf" id="elform">
       <FormKit type="elFormInput" label="input3" name="input3" validation="required" placeholder="testing3" clearable />
