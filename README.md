@@ -1,5 +1,8 @@
 # FormKit element
 
+<a href="https://element-plus.org/">Element plus</a> for <a href="https://formkit.com/">FormKit.</a>
+
+
 ## Setup
 
 Create formkit.config.ts

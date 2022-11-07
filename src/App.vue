@@ -88,22 +88,37 @@ onMounted(() => {
 
 <template>
   <div>
-    formkit
-    <!--    <FormKit type="form" v-model="values">
-      <FormKit :type="input_test" label="Username" name="two_factor_code" help="We’ve sent a code to your phone."
-        validation="required" validation-visibility="live" />
-    </FormKit>
-    <pre>{{ values }}</pre> -->
 
-    <hr />
-    <!-- FormKit type="elForm" v-model="data">
-      <FormKitSchema :schema="schema" />
-    </FormKit -->
 
     <FormKit type="elForm" v-model="data" ref="elf" id="elform">
-      <FormKit type="elInput" name="input4" label="test" validation="required" />
 
-      <FormKit type="text" label="test" name="input1" validation="required" />
+      <FormKit type="elInput" name="input4" label="elInput" validation="required" />
+
+      <FormKit type="elSelect" name="select2" label="elSelect" :options="{
+        mercury: 'Mercury',
+        venus: 'Venus',
+        earth: 'Earth',
+        mars: 'Mars',
+        jupiter: 'Jupiter',
+        saturn: 'Saturn',
+        uranus: 'Uranus',
+        neptune: 'Neptune'
+      }" />
+
+      <FormKit type="elSelect" name="select2" label="elSelect (multiple)" :options="{
+        mercury: 'Mercury',
+        venus: 'Venus',
+        earth: 'Earth',
+        mars: 'Mars',
+        jupiter: 'Jupiter',
+        saturn: 'Saturn',
+        uranus: 'Uranus',
+        neptune: 'Neptune'
+      }" multiple />
+
+      <FormKit type="elRate" name="rate2" label="elRate" />
+
+
       <!-- FormKit type="elFormInput" label="input2" name="input2" validation="required" validation-visibility="dirty" /-->
       <FormKit type="elFormInput" label="input3" name="input3" validation="required" placeholder="testing3" clearable />
 
