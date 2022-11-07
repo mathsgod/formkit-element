@@ -75,17 +75,45 @@ const elf = ref({});
   console.log('node submit');
 })
  */
+
+const createFilter = (queryString) => {
+  return (restaurant) => {
+    return (
+      restaurant.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0
+    )
+  }
+}
 onMounted(() => {
   /*   getNode("elform").on("submit", function () {
       console.log('node submit', data.value);
     }); */
+
+  restaurants.value = [
+    { value: 'vue', link: 'https://github.com/vuejs/vue' },
+    { value: 'element', link: 'https://github.com/ElemeFE/element' },
+    { value: 'cooking', link: 'https://github.com/ElemeFE/cooking' },
+    { value: 'mint-ui', link: 'https://github.com/ElemeFE/mint-ui' },
+    { value: 'vuex', link: 'https://github.com/vuejs/vuex' },
+    { value: 'vue-router', link: 'https://github.com/vuejs/vue-router' },
+    { value: 'babel', link: 'https://github.com/babel/babel' },
+  ]
 })
+
+const restaurants = ref([])
+const querySearch = (queryString, cb) => {
+  const results = queryString
+    ? restaurants.value.filter(createFilter(queryString))
+    : restaurants.value
+  // call callback function to return suggestions
+  cb(results)
+}
 </script>
 
 <template>
   <div>
 
     <FormKit type="form" v-model="data">
+
       <FormKit type="elInput" name="input4" label="elInput" validation="required" />
 
       <FormKit type="elInput" name="input5" label="elInput (placeholder)" validation="required"
@@ -146,6 +174,10 @@ onMounted(() => {
         uranus: 'Uranus',
         neptune: 'Neptune',
       }" />
+
+      <FormKit type="elAutocomplete" placeholder="input v" label="elAutocomplete" name="auto1" :trigger-on-focus="false"
+        :fetch-suggestions="querySearch" clearable>
+      </FormKit>
 
 
       <FormKit type="elUpload" label="elUpload" name="upload1">
