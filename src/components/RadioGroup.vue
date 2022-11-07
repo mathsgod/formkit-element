@@ -15,6 +15,7 @@ props.context.classes.inner = "";
 </script>
 
 <template>
-    <el-input v-model="value" @focusout="context.handlers.blur" type="textarea" v-bind="context.attrs" />
-
+    <el-radio-group v-model="value" v-bind="context.attrs">
+        <el-radio v-for="(label, value) in context.options" :key="value" :label="label" :value="value" />
+    </el-radio-group>
 </template>

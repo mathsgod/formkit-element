@@ -7,6 +7,11 @@ import DatePicker from "./DatePicker.vue"
 import TimePicker from "./TimePicker.vue"
 import ColorPicker from "./ColorPicker.vue"
 import Password from "./Password.vue"
+import InputNumber from "./InputNumber.vue"
+import Checkbox from "./Checkbox.vue"
+import Slider from "./Slider.vue"
+import TimeSelect from "./TimeSelect.vue"
+import RadioGroup from "./RadioGroup.vue"
 
 import FormInput from './FormInput.vue'
 import FormDatePicker from './FormDatePicker.vue'
@@ -21,14 +26,16 @@ import FormInputNumber from './FormInputNumber.vue'
 import FormRadioGroup from './FormRadioGroup.vue'
 import FormSlider from './FormSlider.vue'
 import FormColorPicker from './FormColorPicker.vue'
-
-
 import { createInput } from '@formkit/vue'
 
 export const elRate = createInput(Rate);
 export const elSelect = createInput(Select, {
     props: ["options"]
 });
+export const elRadioGroup = createInput(RadioGroup, {
+    props: ["options"]
+});
+
 export const elSwitch = createInput(Switch);
 export const elInput = createInput(Input)
 export const elTextarea = createInput(Textarea)
@@ -36,6 +43,10 @@ export const elPassword = createInput(Password)
 export const elDatePicker = createInput(DatePicker)
 export const elTimePicker = createInput(TimePicker)
 export const elColorPicker = createInput(ColorPicker)
+export const elInputNumber = createInput(InputNumber)
+export const elCheckbox = createInput(Checkbox);
+export const elSlider = createInput(Slider);
+export const elTimeSelect = createInput(TimeSelect);
 
 export const elForm: any = {
     type: "input",

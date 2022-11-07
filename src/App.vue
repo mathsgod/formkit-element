@@ -127,6 +127,23 @@ onMounted(() => {
       <FormKit type="elTimePicker" name="time2" label="elTimePicker" />
       <FormKit type="elColorPicker" name="color12" label="elColorPicker" />
 
+      <FormKit type="elInputNumber" name="inputNumber2" label="elInputNumber" />
+      <FormKit type="elCheckbox" name="cb5" label="elCheckbox" />
+
+      <FormKit type="elSlider" name="slider2" label="elSlider" />
+      <FormKit type="elTimeSelect" name="timeSelect3" label="elTimeSelect" />
+
+      <FormKit type="elRadioGroup" label="elRadioGroup" name="radio3" :options="{
+        mercury: 'Mercury',
+        venus: 'Venus',
+        earth: 'Earth',
+        mars: 'Mars',
+        jupiter: 'Jupiter',
+        saturn: 'Saturn',
+        uranus: 'Uranus',
+        neptune: 'Neptune',
+      }" />
+
       <el-divider>Form Item</el-divider>
 
       <!-- FormKit type="elFormInput" label="input2" name="input2" validation="required" validation-visibility="dirty" /-->

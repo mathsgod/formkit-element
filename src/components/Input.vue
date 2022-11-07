@@ -15,7 +15,6 @@ props.context.classes.inner = "";
 </script>
 
 <template>
-    <el-input v-model="value" :clearable="props.context.clearable" @focusout="context.handlers.blur"
-        v-bind="context.attrs" />
+    <el-input v-model="value" @focusout="context.handlers.blur" v-bind="context.attrs" />
 
 </template>

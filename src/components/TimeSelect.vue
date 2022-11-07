@@ -15,6 +15,6 @@ props.context.classes.inner = "";
 </script>
 
 <template>
-    <el-input v-model="value" @focusout="context.handlers.blur" type="textarea" v-bind="context.attrs" />
+    <el-time-select v-model="value" v-bind="context.attrs" />
 
 </template>
