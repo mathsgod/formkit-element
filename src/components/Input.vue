@@ -20,5 +20,4 @@ props.context.classes.inner = "";
 
 <template>
     <el-input v-model="value" @focusout="context.handlers.blur" v-bind="context.attrs" />
-
 </template>
