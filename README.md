@@ -74,6 +74,58 @@ export default config
 ```
 
 
+#### elSelect
+Custom template
+```html
+<script setup>
+import { ref } from "vue";
+const data = ref({});
+   
+const cities = [
+    {
+        value: 'Beijing',
+        label: 'Beijing',
+    },
+    {
+        value: 'Shanghai',
+        label: 'Shanghai',
+    },
+    {
+        value: 'Nanjing',
+        label: 'Nanjing',
+    },
+    {
+        value: 'Chengdu',
+        label: 'Chengdu',
+    },
+    {
+        value: 'Shenzhen',
+        label: 'Shenzhen',
+    },
+    {
+        value: 'Guangzhou',
+        label: 'Guangzhou',
+    },
+]
+
+</script>
+<template>
+  <FormKit type="elSelect" label="select (Custom template)" name="input1" :options="cities">
+      <template #option="{ item }">
+          <span style="float: left">{{ item.label }}</span>
+          <span style="
+              float: right;
+              color: var(--el-text-color-secondary);
+              font-size: 13px;
+              ">{{ item.value }}
+          </span>
+      </template>
+  </FormKit>
+<template>
+```
+
+
+
 #### el-form-item preivew
 
 <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/formItem.png" alt="preview" width="500" />

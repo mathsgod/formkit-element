@@ -38,5 +38,17 @@ app.use(plugin, defaultConfig({
     }
 }))
 
+import { createRouter, createWebHistory } from 'vue-router'
+
+let router = createRouter({
+    history: createWebHistory(),
+    routes: [
+        { path: "/", component: () => import("./pages/index.vue") },
+        { path: '/select', component: () => import('./pages/select.vue') }
+    ],
+})
+
+app.use(router);
+
 
 app.mount('#app')
