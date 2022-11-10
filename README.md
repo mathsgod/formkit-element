@@ -11,8 +11,10 @@
 
 1. This library require <a href="https://element-plus.org/">Element plus</a> and <a href="https://formkit.com/">FormKit</a> to be installed.
 
+If you are using nuxt, you can use <a href="https://formkit.com/essentials/installation">FormKit nuxt module</a> to install FormKit.
 
-2. Create formkit.config.ts
+
+2. Create formkit.config.ts if using nuxt
 ```typescript
 import { DefaultConfigOptions } from '@formkit/vue'
 import { createElementPlugin } from 'formkit-element'
@@ -20,6 +22,18 @@ import { createElementPlugin } from 'formkit-element'
 const config: DefaultConfigOptions = {
     plugins: [createElementPlugin()]
 }
+```
+
+3. or direct setup in main.ts
+```typescript
+const app = createApp(App);
+
+import { plugin, defaultConfig } from '@formkit/vue'
+import { createElementPlugin } from "formkit-element";
+app.use(plugin, defaultConfig({
+    plugins: [createElementPlugin()]
+}))
+```
 
 export default config
 ```

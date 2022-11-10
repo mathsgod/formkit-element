@@ -5,7 +5,7 @@ import 'element-plus/dist/index.css'
 
 import App from './App.vue'
 
-import { plugin, defaultConfig, createInput } from '@formkit/vue'
+import { plugin, defaultConfig } from '@formkit/vue'
 import '@formkit/themes/genesis'
 
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
