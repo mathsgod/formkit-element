@@ -5,7 +5,7 @@ import { onMounted, ref } from "vue";
 import { getNode } from '@formkit/core';
 
 const data = ref({
-
+  input1: "hello"
 });
 
 const data2 = ref({
@@ -54,6 +54,14 @@ const querySearch = (queryString, cb) => {
 
 <template>
   <div>
+
+    <FormKit type="form" v-model="data">
+      <FormKit type="elInput" name="input1" label="elInput" />
+    </FormKit>
+
+    <el-button @click="data.input1 = 'world'">Change</el-button>
+
+    <pre wrap>{{ data }}</pre>
 
     <el-divider></el-divider>
 
