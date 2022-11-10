@@ -62,7 +62,7 @@ let submitForm = () => {
   <div>
 
     <FormKit type="elForm" v-model="data">
-      <FormKit type="elFormItem" label="testing">
+      <FormKit type="elFormItem" label="testing" >
         <FormKit type="elInput" name="input1" validation="required" />
       </FormKit>
 
