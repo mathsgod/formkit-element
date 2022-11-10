@@ -1,8 +1,5 @@
 <script setup>
-import { createInput } from '@formkit/vue'
-import myinput from './components/Input.vue'
 import { onMounted, ref } from "vue";
-import { getNode } from '@formkit/core';
 
 const data = ref({
   input1: "hello"
@@ -57,6 +54,14 @@ const querySearch = (queryString, cb) => {
 
     <FormKit type="form" v-model="data">
       <FormKit type="elInput" name="input1" label="elInput" />
+      <FormKit type="elUpload" name="input2" label="elUpload">
+        <el-button size="small" type="primary">Click to upload</el-button>
+        <template #tip>
+          <div class="el-upload__tip">
+            jpg/png files with a size less than 500KB.
+          </div>
+        </template>
+      </FormKit>
     </FormKit>
 
     <el-button @click="data.input1 = 'world'">Change</el-button>

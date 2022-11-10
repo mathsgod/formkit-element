@@ -1,29 +1,21 @@
-<script setup>
-import { ref, watch } from "vue"
+<script>
+import { defineComponent, h } from 'vue'
+import { ElUpload } from 'element-plus';
+export default defineComponent({
+    props: ["context"],
+    render(props) {
+        return h(ElUpload, {
+            autoUpload: false,
+            "modelValue:fileList": props.context.node.value,
+            "onUpdate:fileList": (val) => {
+                props.context.node.input(val);
+            },
+            ...props.context.attrs
+        }, props.context.slots?.default())
+    },
+    setup(props) {
+        props.context.classes.inner = "";
+    },
 
-const props = defineProps({
-    context: Object,
 })
-
-let value = ref(props.context.node.value);
-
-//watch for changes of node value, update the input value
-props.context.node.on('input', (e) => {
-    value.value = e.payload
-});
-
-watch(() => value.value, (val) => {
-    props.context.node.input(val);
-})
-
-props.context.classes.inner = "";
-
-//slot doesn't work
 </script>
-
-<template>
-    <el-upload>
-        <slot></slot>
-    </el-upload>
-
-</template>
