@@ -10,7 +10,7 @@ const props = defineProps({
 let value = ref(null);
 
 watch(() => value.value, (val) => {
-    props.context.node.input(value);
+    props.context.node.input(val);
 })
 
 

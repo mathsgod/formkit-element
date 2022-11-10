@@ -10,7 +10,7 @@ let context = props.context;
 let value = ref(context.node.value);
 
 watch(() => value.value, (val) => {
-    props.context.node.input(value);
+    props.context.node.input(val);
 })
 
 let error = ref(null);
