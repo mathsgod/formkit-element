@@ -47,12 +47,29 @@ const querySearch = (queryString, cb) => {
   // call callback function to return suggestions
   cb(results)
 }
+
+
+let submitForm = () => {
+  console.log('submitForm', data.value);
+
+};
+
 </script>
+
+
 
 <template>
   <div>
 
-    <FormKit type="form" v-model="data">
+    <FormKit type="elForm" v-model="data">
+      <FormKit type="elFormItem" label="testing">
+        <FormKit type="elInput" name="input1" validation="required" />
+      </FormKit>
+
+    </FormKit>
+
+
+    <FormKit type="elForm" v-model="data" :submit="submitForm">
       <FormKit type="elInput" name="input1" label="elInput" />
       <FormKit type="elUpload" name="input2" label="elUpload">
         <el-button size="small" type="primary">Click to upload</el-button>
@@ -62,6 +79,7 @@ const querySearch = (queryString, cb) => {
           </div>
         </template>
       </FormKit>
+
     </FormKit>
 
     <el-button @click="data.input1 = 'world'">Change</el-button>

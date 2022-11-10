@@ -15,6 +15,7 @@ import RadioGroup from "./RadioGroup.vue"
 import Upload from "./Upload.vue"
 import Autocomplete from "./Autocomplete.vue"
 
+import FormItem from "./FormItem.vue"
 import FormInput from './FormInput.vue'
 import FormPassword from './FormPassword.vue'
 import FormDatePicker from './FormDatePicker.vue'
@@ -57,7 +58,7 @@ export const elAutocomplete = createInput(Autocomplete);
 export const elForm: any = {
     type: "input",
     component: Form,
-    props: ["submitLabel"]
+    props: ["submitLabel", "submit"]
 }
 
 export const elFormPassword: any = {
@@ -131,4 +132,10 @@ export const elFormSlider: any = {
 export const elFormColorPicker: any = {
     type: "input",
     component: FormColorPicker,
+}
+
+export const elFormItem: any = {
+    type: "input",
+    component: FormItem,
+
 }

@@ -13,8 +13,8 @@ const onSubmit = async () => {
 }
 const onSubmitForm = () => {
     props.context.node.emit("submit");
+    props.context.submit?.();
 }
-
 
 
 let submit_label = props.context.submitLabel ?? 'Submit';

@@ -139,7 +139,7 @@ export default config
 - elSwitch
 - elTimePicker
 - elTimeSelect
-- elUpload (not working yet)
+- elUpload
 - elForm
 
 #### Component with el-form-item
