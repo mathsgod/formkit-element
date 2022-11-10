@@ -35,9 +35,6 @@ app.use(plugin, defaultConfig({
 }))
 ```
 
-export default config
-```
-
 ## Usage
 
 ### Basic
