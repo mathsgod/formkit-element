@@ -9,10 +9,12 @@
 
 ## Setup
 
+This library require <a href="https://element-plus.org/">Element plus</a> and <a href="https://formkit.com/">FormKit</a> to be installed.
+
+
 Create formkit.config.ts
 ```typescript
 import { DefaultConfigOptions } from '@formkit/vue'
-
 import { createElementPlugin } from 'formkit-element'
 
 const config: DefaultConfigOptions = {
