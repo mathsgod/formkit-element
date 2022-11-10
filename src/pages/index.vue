@@ -60,18 +60,6 @@ let submitForm = () => {
 
 <template>
   <div>
-
-    <FormKit type="elForm" v-model="data">
-
-      <FormKit type="elSelect" label="select">
-      </FormKit>
-      <FormKit type="elFormItem" label="testing">
-        <FormKit type="elInput" name="input1" validation="required" />
-      </FormKit>
-
-    </FormKit>
-
-
     <FormKit type="elForm" v-model="data" :submit="submitForm">
       <FormKit type="elInput" name="input1" label="elInput" />
       <FormKit type="elUpload" name="input2" label="elUpload">
