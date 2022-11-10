@@ -223,18 +223,18 @@ const cities = [
 
 ### elForm submit
 
-```js
+Due to the limitation of vue3, the submit event of elForm is not supported. You can use the submit attribute of FormKit to submit the form.
+
+```typescript
 const data=ref({})
-const form = ref({});
-onMounted(() => {
-  getNode("form1").on("submit", function () {
-    console.log('node submit', data.value);
-  });
-})
+let onSubmit=()=>{
+  console.log('submited')
+}
+
 ```
 
 ```html
-  <FormKit type="elForm" v-model="data" ref="form" id="form1">
+  <FormKit type="elForm" v-model="data" :submit="onSubmit">
     ...   
   </FormKit>
 ```
