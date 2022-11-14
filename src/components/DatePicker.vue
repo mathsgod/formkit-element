@@ -15,5 +15,5 @@ props.context.classes.inner = "";
 </script>
 
 <template>
-    <el-date-picker v-model="value" value-format="YYYY-DD-MM" />
+    <el-date-picker v-model="value" value-format="YYYY-MM-DD" v-bind="context.attrs" />
 </template>

@@ -15,5 +15,5 @@ props.context.classes.inner = "";
 </script>
 
 <template>
-    <el-color-picker v-model="value" />
+    <el-color-picker v-model="value" v-bind="context.attrs" />
 </template>

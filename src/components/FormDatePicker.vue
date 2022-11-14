@@ -47,6 +47,6 @@ context.node.on("message-removed", message => {
 
 <template>
     <el-form-item :label="props.context.label" :required="required">
-        <el-date-picker v-model="value" v-bind="context.attrs" value-format="YYYY-DD-MM" />
+        <el-date-picker v-model="value" v-bind="context.attrs" value-format="YYYY-MM-DD" />
     </el-form-item>
 </template>
