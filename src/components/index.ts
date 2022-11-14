@@ -2,7 +2,7 @@ import { FormKitPlugin } from '@formkit/core';
 import { createInput } from '@formkit/vue'
 
 import Input from './Input'
-import Textarea from './Textarea.vue'
+import Textarea from './Textarea'
 import Rate from './Rate.vue'
 import Select from "./Select.vue"
 import Switch from "./Switch.vue"
@@ -10,7 +10,7 @@ import DatePicker from "./DatePicker.vue"
 import TimePicker from "./TimePicker.vue"
 import ColorPicker from "./ColorPicker.vue"
 import Password from "./Password.vue"
-import InputNumber from "./InputNumber.vue"
+import InputNumber from "./InputNumber"
 import Checkbox from "./Checkbox.vue"
 import Slider from "./Slider.vue"
 import TimeSelect from "./TimeSelect.vue"
@@ -30,7 +30,7 @@ import FormSelect from './FormSelect.vue'
 import FormCheckbox from './FormCheckbox.vue'
 import FormRate from './FormRate.vue'
 import FormSwitch from './FormSwitch.vue'
-import FormInputNumber from './FormInputNumber.vue'
+import FormInputNumber from './FormInputNumber'
 import FormRadioGroup from './FormRadioGroup.vue'
 import FormSlider from './FormSlider.vue'
 import FormColorPicker from './FormColorPicker.vue'
