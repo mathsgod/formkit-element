@@ -22,7 +22,7 @@ import FormItem from "./FormItem"
 import FormInput from './FormInput'
 import FormPassword from './FormPassword.vue'
 import FormDatePicker from './FormDatePicker.vue'
-import FormTextarea from './FormTextarea.vue'
+import FormTextarea from './FormTextarea'
 import Form from './Form.vue'
 import FormTimePicker from './FormTimePicker.vue'
 import FormTimeSelect from './FormTimeSelect.vue'
