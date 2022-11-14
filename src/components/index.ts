@@ -18,7 +18,7 @@ import RadioGroup from "./RadioGroup.vue"
 import Upload from "./Upload.vue"
 import Autocomplete from "./Autocomplete.vue"
 
-import FormItem from "./FormItem.vue"
+import FormItem from "./FormItem"
 import FormInput from './FormInput'
 import FormPassword from './FormPassword.vue'
 import FormDatePicker from './FormDatePicker.vue'
