@@ -35,6 +35,7 @@ let router = createRouter({
         { path: '/select', component: () => import('./pages/select.vue') },
         { path: '/upload', component: () => import('./pages/upload.vue') },
         { path: '/date', component: () => import('./pages/date.vue') },
+        { path: '/rate', component: () => import('./pages/rate.vue') },
     ],
 })
 

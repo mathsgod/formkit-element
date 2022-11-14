@@ -38,9 +38,9 @@ const cities = [
     <FormKit type="elForm" v-model="data">
         <FormKit type="elSelect" label="select" name="input1" :options="cities" />
 
-        <FormKit type="elSelect" label="select (multiple)" name="input2" :options="cities" multiple />
+        <FormKit type="elSelect" label="select (multiple)" name="input1" :options="cities" multiple />
 
-        <FormKit type="elSelect" label="select (Custom template)" name="input3" :options="cities" multiple>
+        <FormKit type="elSelect" label="select (Custom template)" name="input1" :options="cities" multiple>
             <template #option="{ item }">
                 <span style="float: left">{{ item.label }}</span>
                 <span style="
@@ -52,7 +52,7 @@ const cities = [
             </template>
 
         </FormKit>
-        <FormKit type="elFormSelect" label="select" name="input4" :options="cities" />
+        <FormKit type="elFormSelect" label="select" name="input1" :options="cities" />
     </FormKit>
 
 

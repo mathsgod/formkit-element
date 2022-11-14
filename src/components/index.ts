@@ -3,8 +3,8 @@ import { createInput } from '@formkit/vue'
 
 import Input from './Input'
 import Textarea from './Textarea'
-import Rate from './Rate.vue'
-import Select from "./Select.vue"
+import Rate from './Rate'
+import Select from "./Select"
 import Switch from "./Switch.vue"
 import DatePicker from "./DatePicker.vue"
 import TimePicker from "./TimePicker.vue"
@@ -26,9 +26,9 @@ import FormTextarea from './FormTextarea'
 import Form from './Form.vue'
 import FormTimePicker from './FormTimePicker.vue'
 import FormTimeSelect from './FormTimeSelect.vue'
-import FormSelect from './FormSelect.vue'
+import FormSelect from './FormSelect'
 import FormCheckbox from './FormCheckbox.vue'
-import FormRate from './FormRate.vue'
+import FormRate from './FormRate'
 import FormSwitch from './FormSwitch.vue'
 import FormInputNumber from './FormInputNumber'
 import FormRadioGroup from './FormRadioGroup.vue'
