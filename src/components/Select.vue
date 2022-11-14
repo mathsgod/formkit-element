@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watch, h } from "vue"
+import { normalizeOptions } from "@formkit/inputs";
 
 const props = defineProps({
     context: Object,
@@ -19,29 +20,8 @@ watch(() => value.value, (val) => {
 
 props.context.classes.inner = "";
 
-let options = [];
-//check context options is an array
-if (Array.isArray(props.context.options)) {
 
-    for (let o of props.context.options) {
-        if (typeof o === 'object') {
-            options.push(o);
-        } else {
-            options.push({
-                value: o,
-                label: o
-            });
-        }
-    }
-} else if (typeof props.context.options === 'object') {
-    for (let o in props.context.options) {
-        options.push({
-            value: o,
-            label: props.context.options[o]
-        });
-    }
-}
-
+let options = normalizeOptions(props.context.node.props.options ?? []);
 
 let getOptionComponent = (option) => {
 
