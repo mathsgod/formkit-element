@@ -1,7 +1,7 @@
 import { FormKitPlugin } from '@formkit/core';
 import { createInput } from '@formkit/vue'
 
-import Input from './Input.vue'
+import Input from './Input'
 import Textarea from './Textarea.vue'
 import Rate from './Rate.vue'
 import Select from "./Select.vue"
