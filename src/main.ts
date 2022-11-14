@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import ElementPlus, { ElInput, ElFormItem } from 'element-plus'
+import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
 
@@ -32,7 +32,8 @@ let router = createRouter({
     routes: [
         { path: "/", component: () => import("./pages/index.vue") },
         { path: '/input', component: () => import('./pages/input.vue') },
-        { path: '/select', component: () => import('./pages/select.vue') }
+        { path: '/select', component: () => import('./pages/select.vue') },
+        { path: '/upload', component: () => import('./pages/upload.vue') },
     ],
 })
 

@@ -1,4 +1,6 @@
 import { FormKitPlugin } from '@formkit/core';
+import { createInput } from '@formkit/vue'
+
 import Input from './Input.vue'
 import Textarea from './Textarea.vue'
 import Rate from './Rate.vue'
@@ -32,7 +34,9 @@ import FormInputNumber from './FormInputNumber.vue'
 import FormRadioGroup from './FormRadioGroup.vue'
 import FormSlider from './FormSlider.vue'
 import FormColorPicker from './FormColorPicker.vue'
-import { createInput } from '@formkit/vue'
+import FormUpload from './FormUpload'
+
+
 
 
 export const createElementPlugin = (): FormKitPlugin => {
@@ -159,6 +163,12 @@ export const createElementPlugin = (): FormKitPlugin => {
                     type: "input",
                     component: FormItem,
                 });
+            case "elFormUpload":
+                return node.define({
+                    type: "input",
+                    component: FormUpload,
+                });
+
         }
     }
 };

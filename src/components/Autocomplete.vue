@@ -1,9 +1,10 @@
-<script setup>
+<script setup lang="ts">
+import { FormKitFrameworkContext } from "@formkit/core";
 import { ref, watch } from "vue"
 
-const props = defineProps({
-    context: Object,
-})
+const props = defineProps<{
+    context: FormKitFrameworkContext;
+}>()
 
 let value = ref(null);
 

@@ -1,9 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import { ref, watch } from "vue"
+import { FormKitFrameworkContext } from "@formkit/core"
 
-const props = defineProps({
-    context: Object,
-})
+
+const props = defineProps<{
+    context: FormKitFrameworkContext;
+}>()
 
 let context = props.context;
 
@@ -13,36 +15,22 @@ watch(() => value.value, (val) => {
     props.context.node.input(val);
 })
 
-let required = props.context.node.props.parsedRules.some(rule => {
+let required = props.context.node.props.parsedRules.some((rule: any) => {
     if (rule.name === "required") {
         return true;
     }
 });
 
-let error = ref(null);
+let error = ref<any>(null);
 
-function showErrorMessage(messages) {
-    let messagesArray = Object.entries(messages);
-    if (messagesArray.length > 0) {
-        error.value = messagesArray[0][1].value;
-    } else {
-        error.value = null;
-    }
+function showErrorMessage() {
+    let messagesArray = Object.entries(props.context.messages);
+    error.value = (messagesArray.length > 0) ? messagesArray[0][1].value : null
 }
 
-context.node.on("message-added", message => {
-    //    console.log("message added", message);
-    showErrorMessage(props.context.messages);
-})
-context.node.on("message-updated", message => {
-    //  console.log("message updated", message);
-    showErrorMessage(props.context.messages);
-})
-
-context.node.on("message-removed", message => {
-    //console.log("message removed", message);
-    showErrorMessage(props.context.messages);
-})
+context.node.on("message-added", showErrorMessage)
+context.node.on("message-updated", showErrorMessage)
+context.node.on("message-removed", showErrorMessage)
 
 </script>
 
