@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watch } from "vue"
+import { normalizeOptions } from "@formkit/inputs";
 
 const props = defineProps({
     context: Object,
@@ -19,6 +20,8 @@ let required = props.context.node.props.parsedRules.some(rule => {
     }
 });
 
+let options = normalizeOptions(props.context.node.props.options ?? []);
+
 let error = ref(null);
 function showErrorMessage() {
     let messagesArray = Object.entries(props.context.messages);
@@ -33,7 +36,7 @@ context.node.on("message-removed", showErrorMessage)
 <template>
     <el-form-item :label="context.label" :error="error" :required="required">
         <el-select v-model="value" v-bind="context.attrs">
-            <el-option v-for="(label, value) in context.options" :key="value" :label="label" :value="value"></el-option>
+            <el-option v-for="option in options" :key="option.value" :label="option.label" :value="option.value"></el-option>
         </el-select>
         <div v-if="context.help" :class="context.classes.help" v-text="context.help" />
     </el-form-item>

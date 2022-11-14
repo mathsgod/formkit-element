@@ -30,6 +30,7 @@ let getOptionComponent = (option) => {
     });
     return h("div", {}, comp);
 }
+
 </script>
 
 <template>
