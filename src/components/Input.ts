@@ -7,6 +7,9 @@ export default defineComponent({
         props.context.classes.inner = "";
 
         let v = ref(props.context.node.value);
+        props.context.node.on("input", (val: any) => {
+            v.value = val.payload;
+        })
 
         return () => {
             return h(ElInput, {

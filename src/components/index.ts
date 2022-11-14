@@ -19,7 +19,7 @@ import Upload from "./Upload.vue"
 import Autocomplete from "./Autocomplete.vue"
 
 import FormItem from "./FormItem.vue"
-import FormInput from './FormInput.vue'
+import FormInput from './FormInput'
 import FormPassword from './FormPassword.vue'
 import FormDatePicker from './FormDatePicker.vue'
 import FormTextarea from './FormTextarea.vue'

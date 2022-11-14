@@ -16,9 +16,11 @@ const data = ref({
 
 
     <FormKit type="elForm" v-model="data">
-        <FormKit type="elFormInput" label="elFormInput" name="input3" validation="required" />
+        <FormKit type="elFormInput" label="elFormInput" name="input1" validation="required"/>
 
     </FormKit>
 
     <pre wrap>{{ data }}</pre>
+
+
 </template>
