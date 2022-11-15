@@ -165,9 +165,8 @@ app.use(plugin, defaultConfig({
 
 <details>
   <summary>elSelect</summary>
-
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elSelect.png"/>
 Custom template of select options
-
 ```html
 <script setup>
 import { ref } from "vue";
