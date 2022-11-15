@@ -4,11 +4,12 @@ const data = ref({})
 </script>
 
 <template>
-    <FormKit type="elForm" v-model="data">
-        <FormKit type="elDatePicker" label="elDate" name="date1" value-format="YYYY-MM" validation="required" />
-        <FormKit type="elFormDatePicker" label="elFormDatePicker" name="date2" value-format="YYYY-MM"
-            validation="required" />
+    <pre wrap>{{ data }}</pre>
+    <FormKit type="group" v-model="data">
+        <FormKit type="elDatePicker" label="elDatePicker" name="date1" validation="required" />
+        <FormKit type="elDateRangePicker" label="elDateRangePicker" name="date2" />
+
     </FormKit>
 
-    <pre wrap>{{ data }}</pre>
+
 </template>

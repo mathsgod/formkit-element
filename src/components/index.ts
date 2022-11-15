@@ -18,6 +18,7 @@ import RadioGroup from "./RadioGroup"
 import Upload from "./Upload"
 import Autocomplete from "./Autocomplete"
 import Cascader from './Cascader';
+import DateRangePicker from './DateRangePicker';
 
 import FormItem from "./FormItem"
 import FormInput from './FormInput'
@@ -44,6 +45,8 @@ export const createElementPlugin = (): FormKitPlugin => {
 
     return (node) => {
         switch (node.props.type) {
+            case "elDateRangePicker":
+                return node.define(createInput(DateRangePicker));
             case "elCascader":
                 return node.define(createInput(Cascader));
             case "elInput":
