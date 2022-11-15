@@ -218,6 +218,10 @@ const cities = [
 
 </details>
 
+<deatils>
+  <summary>elDatePicker</summary>  
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elDatePicker.png"/>
+</deatils>
 
 - elAutocomplete
 - elCheckbox
