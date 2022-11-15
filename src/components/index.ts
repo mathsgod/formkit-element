@@ -16,7 +16,7 @@ import Slider from "./Slider"
 import TimeSelect from "./TimeSelect"
 import RadioGroup from "./RadioGroup"
 import Upload from "./Upload"
-import Autocomplete from "./Autocomplete.vue"
+import Autocomplete from "./Autocomplete"
 
 import FormItem from "./FormItem"
 import FormInput from './FormInput'
