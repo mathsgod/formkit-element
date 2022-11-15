@@ -249,7 +249,6 @@ const cities = [
 - elRadioGroup
 - elSlider
 - elTextarea 
-- elSwitch
 - elTimePicker
 - elTimeSelect
 - elUpload
