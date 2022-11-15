@@ -219,10 +219,17 @@ const cities = [
 </details>
 
 <details>
-  <summary>elDatePicker</summary>  
+  <summary>elDatePicker and elDateRangePicker</summary>  
 <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elDatePicker.png"/>
-</details>
 
+```html
+<FormKit type="group" v-model="data">
+  <FormKit type="elDatePicker" label="elDatePicker" name="date1" validation="required" />
+  <FormKit type="elDateRangePicker" label="elDateRangePicker" name="date2" />
+</FormKit>
+```
+
+</details>
 
 <details>
   <summary>elSwitch</summary>  
