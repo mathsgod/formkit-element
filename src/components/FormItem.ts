@@ -37,6 +37,8 @@ export default defineComponent({
                 label: props.context.label,
                 required: required,
                 error: error.value,
+                labelWidth: props.context.labelWidth,
+                labelPosition: props.context.labelPosition,
             }, children);
         }
     }

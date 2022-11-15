@@ -8,6 +8,7 @@ export default defineComponent({
     setup(props) {
         props.context.classes.inner = "";
 
+        console.log(props.context);
         return () => {
             return h(FormItem, {
                 context: props.context
