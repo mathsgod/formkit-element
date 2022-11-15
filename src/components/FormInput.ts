@@ -5,10 +5,9 @@ import Input from './Input'
 
 export default defineComponent({
     props: ["context"],
-    setup(props) {
+    setup(props, { slots }) {
         props.context.classes.inner = "";
 
-        console.log(props.context);
         return () => {
             return h(FormItem, {
                 context: props.context
@@ -17,7 +16,7 @@ export default defineComponent({
                     h(Input, {
                         context: props.context,
                         ...props.context.attrs
-                    })
+                    }, () => slots.default?.())
                 ]
             )
         }

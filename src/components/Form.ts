@@ -21,7 +21,7 @@ export default defineComponent({
                 labelWidth: props.context.labelWidth,
                 labelPosition: props.context.labelPosition,
                 ...props.context.attrs,
-            }, slots.default?.());
+            }, () => slots.default?.());
 
 
             let f = ref(null);
@@ -30,25 +30,42 @@ export default defineComponent({
                 type: "form",
                 modelValue: v.value,
                 actions: false,
-                onSubmit: (e: any) => {
+                onSubmit() {
                     props.context.node.emit("submit");
                     props.context.submit?.();
                 }
-            }, [form])
+            }, form)
 
-            let submit_button = h(ElButton, {
-                type: "primary",
-                icon: Check,
-                onClick: () => {
-                    if (f.value) {
-                        (f.value as any).node.submit();
-                    }
+            let onSubmit = () => {
+                if (f.value) {
+                    (f.value as any).node.submit();
                 }
-            }, submit_label);
+            };
 
-            return h("div", {
 
-            }, [form_kit, submit_button])
+
+            let children = [form_kit];
+            if (slots.footer) {
+
+                children.push(h("div", {}, slots.footer({
+                    submit: onSubmit
+                })));
+            } else {
+
+                let submit_button = h(ElButton, {
+                    type: "primary",
+                    icon: Check,
+                    onClick: () => {
+                        if (f.value) {
+                            (f.value as any).node.submit();
+                        }
+                    }
+                }, () => submit_label);
+
+                children.push(h("div", {}, submit_button));
+            }
+
+            return h("div", {}, children)
         }
     }
 });
