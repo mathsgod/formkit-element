@@ -344,7 +344,6 @@ const data = ref({})
 - elSlider
 - elTextarea 
 - elTimeSelect
-- elUpload
 - elForm
 
 
