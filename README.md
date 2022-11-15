@@ -195,8 +195,8 @@ const cities = [
 ### Supported type
 - elAutocomplete
 - elCheckbox
-  - <details><summary>Preview</summary><img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elCasader.png"/></details>
 - elCascader
+  - <details><summary>Preview</summary><img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elCascader.png"/></details>
 - elColorPicker
 - elDatePicker
 - elInput
