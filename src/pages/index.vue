@@ -9,13 +9,6 @@ const data2 = ref({
 
 });
 
-const elf = ref({});
-
-/* elf.value.node.on("submit", function () {
-  console.log('node submit');
-})
- */
-
 const createFilter = (queryString) => {
   return (restaurant) => {
     return (

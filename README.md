@@ -221,6 +221,17 @@ const cities = [
 - elFormTimeSelect
 - elFormSlider
 
+
+<details>
+<summary>elRate</summary>
+  ```html
+    <FormKit type="elRate" label="Rate" name="rate1" />
+  ```
+  [Rate](https://element-plus.org/en-US/component/rate.html)
+  <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/el-rate.png" alt="preview" width="500" />
+</details>
+
+
 ### elForm submit
 
 Due to the limitation of vue3, the submit event of elForm is not supported. You can use the submit attribute of FormKit to submit the form.
