@@ -308,22 +308,17 @@ let querySearch = (queryString, cb) => {
 
 </details>
 
-
-- elAutocomplete
 - elCheckbox
 - elColorPicker
-- elDatePicker
 - elInput
 - elInputNumber
 - elPassword
 - elRadioGroup
 - elSlider
 - elTextarea 
-- elTimePicker
 - elTimeSelect
 - elUpload
 - elForm
-
 
 
 #### Component with el-form-item

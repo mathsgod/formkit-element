@@ -37,9 +37,7 @@ import FormRadioGroup from './FormRadioGroup'
 import FormSlider from './FormSlider'
 import FormColorPicker from './FormColorPicker'
 import FormUpload from './FormUpload'
-
-
-
+import FormDateRangePicker from './FormDateRangePicker'
 
 export const createElementPlugin = (): FormKitPlugin => {
 
@@ -174,7 +172,11 @@ export const createElementPlugin = (): FormKitPlugin => {
                     type: "input",
                     component: FormUpload,
                 });
-
+            case "elFormDateRangePicker":
+                return node.define({
+                    type: "input",
+                    component: FormDateRangePicker,
+                });
         }
     }
 };
