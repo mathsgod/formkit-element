@@ -2,6 +2,8 @@
 
 <a href="https://element-plus.org/">Element plus</a> for <a href="https://formkit.com/">FormKit.</a>
 
+Most of the components are based on <a href="https://element-plus.org/">Element plus</a>, attributes directly pass to the element plus component.
+
 
 ## Preview
 
@@ -85,8 +87,11 @@ app.use(plugin, defaultConfig({
 ```
 
 
-#### elSelect
+<details>
+<summary>elSelect</summary>
+
 Custom template of select options
+
 ```html
 <script setup>
 import { ref } from "vue";
@@ -135,6 +140,7 @@ const cities = [
 <template>
 ```
 
+</details>
 
 
 #### el-form-item preivew
@@ -238,7 +244,7 @@ const cities = [
 </FormKit>
 ```
 
-  [Element plus document](https://element-plus.org/en-US/component/rate.html)
+  [Element plus rate document](https://element-plus.org/en-US/component/rate.html)
 
   Preview
   
