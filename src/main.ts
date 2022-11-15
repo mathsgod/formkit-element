@@ -39,6 +39,7 @@ let router = createRouter({
         { path: '/cascader', component: () => import('./pages/cascader.vue') },
         { path: '/switch', component: () => import('./pages/switch.vue') },
         { path: '/time', component: () => import('./pages/time.vue') },
+        { path: '/autocomplete', component: () => import('./pages/autocomplete.vue') },
     ],
 })
 
