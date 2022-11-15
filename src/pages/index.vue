@@ -153,6 +153,12 @@ let submitForm = () => {
 
     <el-divider>Component with form Item</el-divider>
 
+    <FormKit type="elForm" v-model="obj">
+        <FormKit type="elFormInput" label="Name abcdef" name="name" validation="required" />
+        <FormKit type="elFormInput" label="Code" name="code" />
+        <FormKit type="elFormTextarea" label="Remark" name="remark" />
+    </FormKit>
+    
     <FormKit type="elForm" label-width="auto" submit-label="OK" v-model="data2">
 
       <FormKit type="elFormInput" label="elFormInput" name="form_input_1" validation="required"
