@@ -224,11 +224,23 @@ const cities = [
 
 <details>
 <summary>elRate</summary>
-  ```html
-    <FormKit type="elRate" label="Rate" name="rate1" />
-  ```
+
+```html
+<FormKit type="form" v-model="data">
+    <FormKit type="elFormRate" label="elFormRate" name="rate" />
+
+    <FormKit type="elRate" label="elRate" name="rate" help="help text" />
+
+    <FormKit type="elRate" label="elRate" name="rate" :texts="['oops', 'disappointed', 'normal', 'good', 'great']"
+        show-text />
+
+    <FormKit type="elRate" label="elRate (allow-half)" name="rate_half" allow-half />
+</FormKit>
+```
+
   [Rate](https://element-plus.org/en-US/component/rate.html)
-  <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/el-rate.png" alt="preview" width="500" />
+
+  <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/el-rate.png" alt="elRate"/>
 </details>
 
 
