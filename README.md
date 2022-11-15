@@ -238,8 +238,10 @@ const cities = [
 </FormKit>
 ```
 
-  [Rate](https://element-plus.org/en-US/component/rate.html)
+  [Element plus document](https://element-plus.org/en-US/component/rate.html)
 
+  Preview
+  
   <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/el-rate.png" alt="elRate"/>
 </details>
 
