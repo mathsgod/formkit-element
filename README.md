@@ -238,6 +238,19 @@ const cities = [
 
 </details>
 
+<details>
+  <summary>elTimePicker</summary>
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elTimePicker.png"/>
+
+```html
+<FormKit type="group" v-model="data">
+  <FormKit type="elTimePicker" label="elTimePicker" name="time1" />
+  <FormKit type="elTimePicker" label="elTimePicker (range)" name="time2" is-range />
+</FormKit>
+```
+
+</details>
+
 
 - elAutocomplete
 - elCheckbox
