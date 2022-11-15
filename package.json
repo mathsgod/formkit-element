@@ -3,6 +3,7 @@
   "private": false,
   "version": "0.0.15",
   "type": "module",
+  "homepage": "https://github.com/mathsgod/formkit-element",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -30,4 +31,5 @@
   "main": "dist/formkit-element.umd.cjs",
   "module": "dist/formkit-element.js",
   "license": "MIT"
+  
 }
