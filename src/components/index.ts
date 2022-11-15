@@ -87,7 +87,7 @@ export const createElementPlugin = (): FormKitPlugin => {
                 return node.define({
                     type: "input",
                     component: Form,
-                    props: ["submitLabel", "submit"]
+                    props: ["submitLabel", "submit", "labelWidth", "labelPosition"]
                 });
             case "elFormPassword":
                 return node.define({
