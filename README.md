@@ -325,6 +325,7 @@ let querySearch = (queryString, cb) => {
 - elFormCheckbox
 - elFormColorPicker
 - elFormDatePicker
+- elFormDateRangePicker
 - elFormInput
 - elFormInputNumber
 - elFormPassword
