@@ -87,8 +87,84 @@ app.use(plugin, defaultConfig({
 ```
 
 
+
+
+#### el-form-item preivew
+
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/formItem.png" alt="preview" width="500" />
+
+
+```typescript
+ <FormKit type="elForm" v-model="data" ref="elf" id="elform">
+      <FormKit type="elFormInput" label="input3" name="input3" validation="required" placeholder="testing3" clearable />
+
+<FormKit type="elFormSelect" label="Select" name="select" :options="{
+        mercury: 'Mercury',
+        venus: 'Venus',
+        earth: 'Earth',
+        mars: 'Mars',
+        jupiter: 'Jupiter',
+        saturn: 'Saturn',
+        uranus: 'Uranus',
+        neptune: 'Neptune',
+      }" validation="required" clearable placeholder="select placeholder" filterable multiple />
+
+      <FormKit type="elFormCheckbox" label="Checkbox1" name="cb1" validation="required" />
+
+      <FormKit type="elFormRate" label="Rate" name="rate1" />
+      <FormKit type="elFormSwitch" label="Switch" name="switch1" />
+      <FormKit type="elFormTimePicker" label="Time Picker 1" name="time_picker_1" />
+      <FormKit type="elFormInputNumber" label="input nubmer 1" name="input_number_1" />
+
+      <FormKit type="elFormRadioGroup" label="Radio Group" name="radio1" :options="{
+        mercury: 'Mercury',
+        venus: 'Venus',
+        earth: 'Earth',
+        mars: 'Mars',
+        jupiter: 'Jupiter',
+        saturn: 'Saturn',
+        uranus: 'Uranus',
+        neptune: 'Neptune',
+      }" validation="required" />
+
+
+      <FormKit type="elFormSlider" label="Slider1" name="slider1" />
+      <FormKit type="elFormSlider" label="Slider2" name="slider2" :min="100" :max="200" :step="2" />
+
+      <FormKit type="elFormColorPicker" label="ColorPicker" name="color1" />
+
+
+    </FormKit>
+```
+
+
+### Supported type
 <details>
-<summary>elSelect</summary>
+  <summary>elCascader</summary>
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elCascader.png"/>
+</details>
+
+<details>
+  <summary>elRate</summary>
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elRate.png"/>
+
+```html
+<FormKit type="form" v-model="data">
+    <FormKit type="elFormRate" label="elFormRate" name="rate" />
+
+    <FormKit type="elRate" label="elRate" name="rate" help="help text" />
+
+    <FormKit type="elRate" label="elRate" name="rate" :texts="['oops', 'disappointed', 'normal', 'good', 'great']"
+        show-text />
+
+    <FormKit type="elRate" label="elRate (allow-half)" name="rate_half" allow-half />
+</FormKit>
+```
+
+</details>
+
+<details>
+  <summary>elSelect</summary>
 
 Custom template of select options
 
@@ -143,68 +219,14 @@ const cities = [
 </details>
 
 
-#### el-form-item preivew
-
-<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/formItem.png" alt="preview" width="500" />
-
-
-```typescript
- <FormKit type="elForm" v-model="data" ref="elf" id="elform">
-      <FormKit type="elFormInput" label="input3" name="input3" validation="required" placeholder="testing3" clearable />
-
-<FormKit type="elFormSelect" label="Select" name="select" :options="{
-        mercury: 'Mercury',
-        venus: 'Venus',
-        earth: 'Earth',
-        mars: 'Mars',
-        jupiter: 'Jupiter',
-        saturn: 'Saturn',
-        uranus: 'Uranus',
-        neptune: 'Neptune',
-      }" validation="required" clearable placeholder="select placeholder" filterable multiple />
-
-      <FormKit type="elFormCheckbox" label="Checkbox1" name="cb1" validation="required" />
-
-      <FormKit type="elFormRate" label="Rate" name="rate1" />
-      <FormKit type="elFormSwitch" label="Switch" name="switch1" />
-      <FormKit type="elFormTimePicker" label="Time Picker 1" name="time_picker_1" />
-      <FormKit type="elFormInputNumber" label="input nubmer 1" name="input_number_1" />
-
-      <FormKit type="elFormRadioGroup" label="Radio Group" name="radio1" :options="{
-        mercury: 'Mercury',
-        venus: 'Venus',
-        earth: 'Earth',
-        mars: 'Mars',
-        jupiter: 'Jupiter',
-        saturn: 'Saturn',
-        uranus: 'Uranus',
-        neptune: 'Neptune',
-      }" validation="required" />
-
-
-      <FormKit type="elFormSlider" label="Slider1" name="slider1" />
-      <FormKit type="elFormSlider" label="Slider2" name="slider2" :min="100" :max="200" :step="2" />
-
-      <FormKit type="elFormColorPicker" label="ColorPicker" name="color1" />
-
-
-    </FormKit>
-```
-
-
-### Supported type
 - elAutocomplete
 - elCheckbox
-- elCascader
-  - <details><summary>Preview</summary><img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elCascader.png"/></details>
 - elColorPicker
 - elDatePicker
 - elInput
 - elInputNumber
 - elPassword
 - elRadioGroup
-- elRate
-- elSelect
 - elSlider
 - elTextarea 
 - elSwitch
@@ -212,6 +234,8 @@ const cities = [
 - elTimeSelect
 - elUpload
 - elForm
+
+
 
 #### Component with el-form-item
 - elFormCheckbox
@@ -228,30 +252,6 @@ const cities = [
 - elFormTimePicker
 - elFormTimeSelect
 - elFormSlider
-
-
-<details>
-<summary>elRate</summary>
-
-```html
-<FormKit type="form" v-model="data">
-    <FormKit type="elFormRate" label="elFormRate" name="rate" />
-
-    <FormKit type="elRate" label="elRate" name="rate" help="help text" />
-
-    <FormKit type="elRate" label="elRate" name="rate" :texts="['oops', 'disappointed', 'normal', 'good', 'great']"
-        show-text />
-
-    <FormKit type="elRate" label="elRate (allow-half)" name="rate_half" allow-half />
-</FormKit>
-```
-
-  [Element plus rate document](https://element-plus.org/en-US/component/rate.html)
-
-  Preview
-  
-  <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/el-rate.png" alt="elRate"/>
-</details>
 
 
 ### elForm submit
