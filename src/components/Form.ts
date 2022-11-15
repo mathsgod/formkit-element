@@ -18,6 +18,8 @@ export default defineComponent({
 
         return () => {
             let form = h(ElForm, {
+                labelWidth: props.context.labelWidth,
+                labelPosition: props.context.labelPosition,
                 ...props.context.attrs,
             }, slots.default?.());
 
