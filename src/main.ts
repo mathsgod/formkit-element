@@ -37,6 +37,7 @@ let router = createRouter({
         { path: '/date', component: () => import('./pages/date.vue') },
         { path: '/rate', component: () => import('./pages/rate.vue') },
         { path: '/cascader', component: () => import('./pages/cascader.vue') },
+        { path: '/switch', component: () => import('./pages/switch.vue') },
     ],
 })
 

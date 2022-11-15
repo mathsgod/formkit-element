@@ -165,8 +165,7 @@ app.use(plugin, defaultConfig({
 
 <details>
   <summary>elSelect</summary>
-<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elSelect.png"/>
-
+  <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elSelect.png"/>
 
 Custom template of select options
 ```html
@@ -223,6 +222,22 @@ const cities = [
   <summary>elDatePicker</summary>  
 <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elDatePicker.png"/>
 </details>
+
+
+<details>
+  <summary>elSwitch</summary>  
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elSwitch.png"/>
+
+```html
+    <FormKit type="group" v-model="data">
+        <FormKit type="elSwitch" label="elSwitch" name="switch1" />
+        <FormKit type="elSwitch" label="elSwitch (size)" name="switch2" size="large" />
+        <FormKit type="elSwitch" name="swtich3" active-text="Pay by month" inactive-text="Pay by year" />
+    </FormKit>
+```
+
+</details>
+
 
 - elAutocomplete
 - elCheckbox
