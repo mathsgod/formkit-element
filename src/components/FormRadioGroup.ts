@@ -1,30 +1,22 @@
 
 import { defineComponent, h, ref } from 'vue'
 import FormItem from './FormItem';
-import Upload from './Upload'
+import RadioGroup from './RadioGroup'
 
 export default defineComponent({
     props: ["context"],
-    setup(props, { slots }) {
+    setup(props) {
         props.context.classes.inner = "";
-
-        let children: any = [];;
-        if (slots) {
-            children = slots.default?.() ?? [];
-        }
 
         return () => {
             return h(FormItem, {
                 context: props.context
             },
                 [
-                    h(Upload, {
-                        style: {
-                            width: "100%"
-                        },
+                    h(RadioGroup, {
                         context: props.context,
                         ...props.context.attrs
-                    }, children)
+                    })
                 ]
             )
         }
