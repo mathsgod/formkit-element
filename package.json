@@ -4,6 +4,7 @@
   "version": "0.0.15",
   "type": "module",
   "homepage": "https://github.com/mathsgod/formkit-element",
+  "url":"https://github.com/mathsgod/formkit-element/issues",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
