@@ -7,7 +7,7 @@ Most of the components are based on <a href="https://element-plus.org/">Element 
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/ui.png" alt="preview" width="500" />
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/ui.png" alt="preview" />
 
 ## Setup
 
@@ -91,7 +91,7 @@ app.use(plugin, defaultConfig({
 
 #### el-form-item preivew
 
-<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/formItem.png" alt="preview" width="500" />
+<img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/formItem.png" alt="preview" />
 
 
 ```typescript
