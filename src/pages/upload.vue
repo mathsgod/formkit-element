@@ -1,27 +1,17 @@
 <script setup>
 import { ref } from "vue";
-const data = ref({
-    input1: ""
-})
-
+const data = ref({})
 </script>
 
 <template>
-    <FormKit type="elForm" v-model="data">
-
-        <FormKit type="elFormInput" label="elInput" name="input1" />
-
-
+    <pre wrap>{{ data }}</pre>
+    <FormKit type="group" v-model="data">
         <FormKit type="elUpload" label="elUpload" name="upload">
-            <el-button>upload</el-button>
+            <el-button type="primary" size="small">select file</el-button>
         </FormKit>
 
         <FormKit type="elFormUpload" label="elFormUpload" name="upload1">
-            <el-button>upload</el-button>
+            <el-button type="primary" size="small">select file</el-button>
         </FormKit>
     </FormKit>
-
-
-
-    <pre wrap>{{ data }}</pre>
 </template>
