@@ -21,7 +21,7 @@ export default defineComponent({
                 labelWidth: props.context.labelWidth,
                 labelPosition: props.context.labelPosition,
                 ...props.context.attrs,
-            }, () => slots.default?.());
+            }, slots);
 
 
             let f = ref(null);
@@ -42,11 +42,8 @@ export default defineComponent({
                 }
             };
 
-
-
             let children = [form_kit];
             if (slots.footer) {
-
                 children.push(h("div", {}, slots.footer({
                     submit: onSubmit
                 })));

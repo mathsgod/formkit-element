@@ -39,7 +39,9 @@ export default defineComponent({
                 error: error.value,
                 labelWidth: props.context.labelWidth,
                 labelPosition: props.context.labelPosition,
-            }, children);
+            }, {
+                default: () => children
+            });
         }
     }
 });

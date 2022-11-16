@@ -11,14 +11,12 @@ export default defineComponent({
         return () => {
             return h(FormItem, {
                 context: props.context
-            },
-                [
-                    h(Input, {
-                        context: props.context,
-                        ...props.context.attrs
-                    }, () => slots.default?.())
-                ]
-            )
+            }, [
+                h(Input, {
+                    context: props.context,
+                    ...props.context.attrs
+                }, slots.default)
+            ])
         }
     }
 });
