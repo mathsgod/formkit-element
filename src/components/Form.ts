@@ -9,11 +9,7 @@ export default defineComponent({
     setup(props, { slots }) {
         props.context.classes.inner = "";
 
-        let v = ref(props.context.node.value);
-        props.context.node.on("input", (val: any) => {
-            v.value = val.payload;
-        })
-
+  
         let submit_label = props.context.submitLabel ?? 'Submit';
 
         return () => {
@@ -28,7 +24,7 @@ export default defineComponent({
             let form_kit = h(FormKit, {
                 ref: f,
                 type: "form",
-                modelValue: v.value,
+                modelValue: props.context.node.value,
                 actions: false,
                 onSubmit() {
                     props.context.node.emit("submit");
