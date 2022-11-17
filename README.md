@@ -345,6 +345,7 @@ const data = ref({})
 - elTextarea 
 - elTimeSelect
 - elForm
+- elTransfer
 
 
 #### Component with el-form-item
@@ -363,7 +364,7 @@ const data = ref({})
 - elFormTimePicker
 - elFormTimeSelect
 - elFormSlider
-
+- elFormTransfer
 
 ### elForm submit
 
