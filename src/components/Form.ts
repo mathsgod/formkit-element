@@ -9,7 +9,7 @@ export default defineComponent({
     setup(props, { slots }) {
         props.context.classes.inner = "";
 
-  
+
         let submit_label = props.context.submitLabel ?? 'Submit';
 
         return () => {
@@ -58,7 +58,7 @@ export default defineComponent({
                 children.push(h("div", {}, submit_button));
             }
 
-            return h("div", {}, children)
+            return h("div", {}, () => children)
         }
     }
 });

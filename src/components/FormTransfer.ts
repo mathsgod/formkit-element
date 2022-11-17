@@ -8,15 +8,23 @@ export default defineComponent({
     setup(props, { slots }) {
         props.context.classes.inner = "";
 
+
+        const getChildren = () => {
+            return [h(Transfer, {
+                context: {
+                    ...props.context,
+                    ...{ slots: slots }
+                },
+                ...props.context.attrs
+            })]
+        }
+
         return () => {
             return h(FormItem, {
                 context: props.context
-            }, [
-                h(Transfer, {
-                    context: props.context,
-                    ...props.context.attrs
-                }, slots)
-            ])
-        }
+            }, {
+                default: getChildren
+            })
+        };
     }
 });

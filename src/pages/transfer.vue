@@ -21,10 +21,24 @@ const options = ref(generateData());
 <template>
     <pre wrap>{{ data }}</pre>
     <FormKit type="group" v-model="data">
-        <FormKit type="elTransfer" label="elTransfer" name="value" :data="options" filterable />
+        <FormKit type="elTransfer" label="elTransfer" name="value" :data="options" filterable>
+            <template #left-footer>
+                <el-button class="transfer-footer" size="small">Operation</el-button>
+            </template>
+            <template #right-footer>
+                <el-button class="transfer-footer" size="small">Operation</el-button>
+            </template>
+        </FormKit>
     </FormKit>
 
     <FormKit type="group" v-model="data">
-        <FormKit type="elFormTransfer" label="elFormTransfer" name="value" :data="options" filterable />
+        <FormKit type="elFormTransfer" label="elFormTransfer" name="value" :data="options" filterable>
+            <template #left-footer>
+                <el-button class="transfer-footer" size="small">Operation</el-button>
+            </template>
+            <template #right-footer>
+                <el-button class="transfer-footer" size="small">Operation</el-button>
+            </template>
+        </FormKit>
     </FormKit>
 </template>

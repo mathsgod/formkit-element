@@ -22,16 +22,6 @@ export default defineComponent({
         props.context.node.on("message-updated", showErrorMessage)
         props.context.node.on("message-removed", showErrorMessage)
 
-        let children: any = [];
-        if (slots.default) {
-            children = slots.default();
-        }
-
-        //<div v-if="context.help" :class="context.classes.help" v-text="context.help" />
-        if (props.context.help) {
-            children.push(h("div", { class: props.context.classes.help }, props.context.help))
-        }
-
         return () => {
             return h(ElFormItem, {
                 label: props.context.label,
@@ -40,7 +30,18 @@ export default defineComponent({
                 labelWidth: props.context.labelWidth,
                 labelPosition: props.context.labelPosition,
             }, {
-                default: () => children
+                default() {
+
+                    let children: any = [];
+                    if (slots.default) {
+                        children = slots.default();
+                    }
+
+                    if (props.context.help) {
+                        children.push(h("div", { class: props.context.classes.help }, props.context.help))
+                    }
+                    return children;
+                }
             });
         }
     }

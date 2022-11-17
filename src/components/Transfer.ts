@@ -3,7 +3,7 @@ import { defineComponent, h, ref } from 'vue'
 
 export default defineComponent({
     props: ["context"],
-    setup(props) {
+    setup(props, { slots }) {
         props.context.classes.inner = "";
 
         if (props.context.classes.wrapper === "formkit-wrapper") {
@@ -15,6 +15,8 @@ export default defineComponent({
             v.value = val.payload;
         })
 
+        
+
         return () => {
             return h(ElTransfer, {
                 modelValue: v.value,
@@ -24,7 +26,7 @@ export default defineComponent({
                 },
                 data: props.context.data,
                 ...props.context.attrs
-            });
+            },props.context.slots);
         }
     }
 });

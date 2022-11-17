@@ -12,12 +12,17 @@ export default defineComponent({
             return h(FormItem, {
                 context: props.context
             },
-                [
-                    h(Textarea, {
-                        context: props.context,
-                        ...props.context.attrs
-                    })
-                ]
+                {
+                    default() {
+                        return [
+                            h(Textarea, {
+                                context: props.context,
+                                ...props.context.attrs
+                            })
+                        ]
+
+                    }
+                }
             )
         }
     }
