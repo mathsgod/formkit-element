@@ -17,8 +17,9 @@ import TimeSelect from "./TimeSelect"
 import RadioGroup from "./RadioGroup"
 import Upload from "./Upload"
 import Autocomplete from "./Autocomplete"
-import Cascader from './Cascader';
-import DateRangePicker from './DateRangePicker';
+import Cascader from './Cascader'
+import DateRangePicker from './DateRangePicker'
+import Transfer from './Transfer'
 
 import FormItem from "./FormItem"
 import FormInput from './FormInput'
@@ -38,11 +39,16 @@ import FormSlider from './FormSlider'
 import FormColorPicker from './FormColorPicker'
 import FormUpload from './FormUpload'
 import FormDateRangePicker from './FormDateRangePicker'
+import FormTransfer from './FormTransfer'
 
 export const createElementPlugin = (): FormKitPlugin => {
 
     return (node) => {
         switch (node.props.type) {
+            case "elTransfer":
+                return node.define(createInput(Transfer, {
+                    props: ["data"]
+                }));
             case "elDateRangePicker":
                 return node.define(createInput(DateRangePicker));
             case "elCascader":
@@ -191,6 +197,13 @@ export const createElementPlugin = (): FormKitPlugin => {
                     component: FormDateRangePicker,
                     props: ["labelWidth", "labelPosition"]
                 });
+            case "elFormTransfer":
+                return node.define({
+                    type: "input",
+                    component: FormTransfer,
+                    props: ["data", "labelWidth", "labelPosition"]
+                });
+            
         }
     }
 };

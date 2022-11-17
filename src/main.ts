@@ -41,6 +41,7 @@ let router = createRouter({
         { path: '/time', component: () => import('./pages/time.vue') },
         { path: '/autocomplete', component: () => import('./pages/autocomplete.vue') },
         { path: '/form', component: () => import('./pages/form.vue') },
+        { path: '/transfer', component: () => import('./pages/transfer.vue') },
     ],
 })
 
