@@ -30,7 +30,7 @@ export default defineComponent({
                     props.context.node.emit("submit");
                     props.context.submit?.();
                 }
-            }, form)
+            }, () => form)
 
             let onSubmit = () => {
                 if (f.value) {
@@ -53,12 +53,12 @@ export default defineComponent({
                             (f.value as any).node.submit();
                         }
                     }
-                }, () => submit_label);
+                }, submit_label);
 
-                children.push(h("div", {}, submit_button));
+                children.push(h("div", {}, () => [submit_button]));
             }
 
-            return h("div", {}, () => children)
+            return h("div", {}, children)
         }
     }
 });
