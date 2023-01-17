@@ -21,7 +21,7 @@ import Cascader from './Cascader'
 import DateRangePicker from './DateRangePicker'
 import Transfer from './Transfer'
 
-import FormItem from "./FormItem"
+import FormItem from "./FormItem.vue"
 import FormInput from './FormInput'
 import FormPassword from './FormPassword'
 import FormDatePicker from './FormDatePicker'

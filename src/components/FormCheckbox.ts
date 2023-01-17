@@ -1,6 +1,6 @@
 
 import { defineComponent, h, ref } from 'vue'
-import FormItem from './FormItem';
+import FormItem from './FormItem.vue';
 import CheckBox from './CheckBox'
 
 export default defineComponent({

@@ -1,6 +1,6 @@
 
 import { defineComponent, h, ref } from 'vue'
-import FormItem from './FormItem';
+import FormItem from './FormItem.vue';
 import DatePicker from './DatePicker'
 
 export default defineComponent({

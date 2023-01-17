@@ -1,0 +1,30 @@
+<script setup>
+import { ref } from 'vue'
+let props = defineProps(["context"]);
+
+props.context.classes.inner = "";
+
+let error = ref(null);
+function showErrorMessage() {
+    let messagesArray = Object.entries(props.context.messages);
+    error.value = (messagesArray.length > 0) ? messagesArray[0][1].value : null
+}
+
+let required = props.context.node.props.parsedRules.some((rule) => {
+    if (rule.name === "required") {
+        return true;
+    }
+});
+
+props.context.node.on("message-added", showErrorMessage)
+props.context.node.on("message-updated", showErrorMessage)
+props.context.node.on("message-removed", showErrorMessage)
+
+</script>
+<template>
+    <el-form-item :label="props.context.label" :required="required" :label-width="context.labelWidth"
+        :label-position="context.labelPosition" :error="error">
+        <slot />
+        <div v-if="props.context.help" :class="props.context.classes.help">{{ props.context.help }}</div>
+    </el-form-item>
+</template>

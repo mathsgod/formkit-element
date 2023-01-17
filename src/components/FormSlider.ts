@@ -1,6 +1,6 @@
 
 import { defineComponent, h, ref } from 'vue'
-import FormItem from './FormItem';
+import FormItem from './FormItem.vue';
 import Slider from './Slider'
 
 export default defineComponent({
