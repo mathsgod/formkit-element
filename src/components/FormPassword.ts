@@ -12,12 +12,10 @@ export default defineComponent({
             return h(FormItem, {
                 context: props.context
             },
-                [
-                    h(Password, {
-                        context: props.context,
-                        ...props.context.attrs
-                    })
-                ]
+                () => h(Password, {
+                    context: props.context,
+                    ...props.context.attrs
+                })
             )
         }
     }

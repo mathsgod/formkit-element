@@ -45,7 +45,8 @@ export default defineComponent({
                     props.context.handlers.blur()
                 },
                 ...props.context.attrs
-            }, OptionComponents);
+            }, () => OptionComponents
+            );
         }
     }
 });

@@ -12,12 +12,10 @@ export default defineComponent({
             return h(FormItem, {
                 context: props.context
             },
-                [
-                    h(Rate, {
-                        context: props.context,
-                        ...props.context.attrs
-                    })
-                ]
+                () => h(Rate, {
+                    context: props.context,
+                    ...props.context.attrs
+                })
             )
         }
     }

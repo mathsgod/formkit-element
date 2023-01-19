@@ -22,9 +22,7 @@ export default defineComponent({
         return () => {
             return h(FormItem, {
                 context: props.context
-            }, {
-                default: getChildren
-            })
+            }, getChildren)
         };
     }
 });

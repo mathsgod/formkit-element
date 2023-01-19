@@ -21,7 +21,8 @@ export default defineComponent({
                     props.context.node.input(val);
                 },
                 ...props.context.attrs
-            }, children)
+            }, () => children
+            )
         }
 
 

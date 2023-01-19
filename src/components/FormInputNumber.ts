@@ -12,12 +12,11 @@ export default defineComponent({
             return h(FormItem, {
                 context: props.context
             },
-                [
-                    h(InputNumber, {
-                        context: props.context,
-                        ...props.context.attrs
-                    })
-                ]
+                () => h(InputNumber, {
+                    context: props.context,
+                    ...props.context.attrs
+                })
+
             )
         }
     }

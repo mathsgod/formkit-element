@@ -12,12 +12,10 @@ export default defineComponent({
             return h(FormItem, {
                 context: props.context
             },
-                [
-                    h(DateRangePicker, {
-                        context: props.context,
-                        ...props.context.attrs
-                    })
-                ]
+                () => h(DateRangePicker, {
+                    context: props.context,
+                    ...props.context.attrs
+                })
             )
         }
     }

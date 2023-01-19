@@ -12,12 +12,10 @@ export default defineComponent({
             return h(FormItem, {
                 context: props.context
             },
-                [
-                    h(RadioGroup, {
-                        context: props.context,
-                        ...props.context.attrs
-                    })
-                ]
+                () => h(RadioGroup, {
+                    context: props.context,
+                    ...props.context.attrs
+                })
             )
         }
     }

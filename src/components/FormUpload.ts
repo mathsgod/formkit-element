@@ -17,15 +17,14 @@ export default defineComponent({
             return h(FormItem, {
                 context: props.context
             },
-                [
-                    h(Upload, {
-                        style: {
-                            width: "100%"
-                        },
-                        context: props.context,
-                        ...props.context.attrs
-                    }, children)
-                ]
+                () => h(Upload, {
+                    style: {
+                        width: "100%"
+                    },
+                    context: props.context,
+                    ...props.context.attrs
+                }, children)
+
             )
         }
     }
