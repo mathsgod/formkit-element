@@ -41,6 +41,8 @@ import FormUpload from './FormUpload'
 import FormDateRangePicker from './FormDateRangePicker'
 import FormTransfer from './FormTransfer'
 
+export { FormItem, FormInput, FormPassword, FormDatePicker, FormTextarea, Form, FormTimePicker, FormTimeSelect, FormSelect, FormCheckbox, FormRate, FormSwitch, FormInputNumber, FormRadioGroup, FormSlider, FormColorPicker, FormUpload, FormDateRangePicker, FormTransfer }
+
 export const createElementPlugin = (): FormKitPlugin => {
 
     return (node) => {
