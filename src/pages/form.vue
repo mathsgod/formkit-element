@@ -20,7 +20,7 @@ let onClickSubmit2 = () => {
 </script>
 <template>
     <pre wrap>{{ data }}</pre>
-    <FormKit type="elForm" v-model="data" :submit="onClickSubmit">
+    <FormKit type="elForm" v-model="data" :submit="onClickSubmit" label-width="auto">
         <FormKit type="elFormInput" label="Name abcdef" name="name" validation="required" />
         <FormKit type="elFormInput" label="Code" name="code" />
         <FormKit type="elFormTextarea" label="Remark" name="remark" />
