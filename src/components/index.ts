@@ -26,7 +26,7 @@ import FormInput from './FormInput'
 import FormPassword from './FormPassword'
 import FormDatePicker from './FormDatePicker'
 import FormTextarea from './FormTextarea'
-import Form from './Form'
+import Form from './Form.vue'
 import FormTimePicker from './FormTimePicker'
 import FormTimeSelect from './FormTimeSelect'
 import FormSelect from './FormSelect'
@@ -40,6 +40,8 @@ import FormColorPicker from './FormColorPicker'
 import FormUpload from './FormUpload'
 import FormDateRangePicker from './FormDateRangePicker'
 import FormTransfer from './FormTransfer'
+
+import { forms, disablesChildren } from '@formkit/inputs';
 
 export { FormItem, FormInput, FormPassword, FormDatePicker, FormTextarea, Form, FormTimePicker, FormTimeSelect, FormSelect, FormCheckbox, FormRate, FormSwitch, FormInputNumber, FormRadioGroup, FormSlider, FormColorPicker, FormUpload, FormDateRangePicker, FormTransfer }
 
@@ -92,11 +94,15 @@ export const createElementPlugin = (): FormKitPlugin => {
                     props: ["options"]
                 }));
             case "elForm":
-                return node.define({
-                    type: "input",
+                let n = node.define({
+                    type: "group",
                     component: Form,
-                    props: ["submitLabel", "submit", "labelWidth", "labelPosition"]
+                    props: ["submitLabel", "submit", "labelWidth", "labelPosition", "actions"],
+                    features: [forms, disablesChildren],
+
                 });
+                return n;
+
             case "elFormPassword":
                 return node.define({
                     type: "input",
@@ -205,7 +211,7 @@ export const createElementPlugin = (): FormKitPlugin => {
                     component: FormTransfer,
                     props: ["data", "labelWidth", "labelPosition"]
                 });
-            
+
         }
     }
 };
