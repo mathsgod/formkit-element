@@ -34,11 +34,6 @@ let hasSlot = (name) => {
 
 let hasFooter = hasSlot("footer");
 
-let labelWidth = node.props.labelWidth;
-let labelPosition = node.props.labelPosition;
-console.log(props.context);
-
-
 </script>
 <template>
     <el-form :labelWidth="context.labelWidth" :labelPosition="context.labelPosition" v-bind="context.attrs">
