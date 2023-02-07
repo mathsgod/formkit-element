@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 let props = defineProps(["context"]);
 
-props.context.classes.inner = "";
+//props.context.classes.inner = "";
 
 let error = ref(null);
 function showErrorMessage() {
@@ -23,7 +23,7 @@ props.context.node.on("message-removed", showErrorMessage)
 </script>
 <template>
     <el-form-item :label="props.context.label" :required="required" :label-width="context.labelWidth"
-        :label-position="context.labelPosition" :error="error">
+        :label-position="context.labelPosition" :error="error" :class="context.node.props.outerClass">
         <slot />
         <div v-if="props.context.help" :class="props.context.classes.help">{{ props.context.help }}</div>
     </el-form-item>
