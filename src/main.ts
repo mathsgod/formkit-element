@@ -43,6 +43,7 @@ let router = createRouter({
         { path: '/form', component: () => import('./pages/form.vue') },
         { path: '/transfer', component: () => import('./pages/transfer.vue') },
         { path: '/password', component: () => import('./pages/password.vue') },
+        { path: '/slots', component: () => import('./pages/slots.vue') },
     ],
 })
 
