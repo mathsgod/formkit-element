@@ -112,6 +112,8 @@ let submitForm = () => {
 
       <FormKit type="elDatePicker" name="date3" label="elDatePicker" />
 
+      <FormKit type="elDateRangePicker" name="dateRangePicker1" label="elDateRangePicker1" />
+
       <FormKit type="elTimePicker" name="time2" label="elTimePicker" />
 
       <FormKit type="elColorPicker" name="color12" label="elColorPicker" />
