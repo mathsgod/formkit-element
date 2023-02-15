@@ -45,55 +45,196 @@ import { forms, disablesChildren } from '@formkit/inputs';
 
 export { FormItem, FormInput, FormPassword, FormDatePicker, FormTextarea, Form, FormTimePicker, FormTimeSelect, FormSelect, FormCheckbox, FormRate, FormSwitch, FormInputNumber, FormRadioGroup, FormSlider, FormColorPicker, FormUpload, FormDateRangePicker, FormTransfer }
 
+let getFormItemComponent = (node: any, type: string) => {
+    let define: any = {
+        props: ["labelWidth", "labelPosition"]
+    };
+
+    type = type.replace(/[A-Z]/g, (m: string) => "-" + m.toLowerCase());
+
+    switch (type) {
+        case "el-form-input":
+            define.component = FormInput;
+            return node.define(define);
+        case "el-form-password":
+            define.component = FormPassword;
+            return node.define(define);
+        case "el-form-date-picker":
+            define.component = FormDatePicker;
+            return node.define(define);
+        case "el-form-textarea":
+            define.component = FormTextarea;
+            return node.define(define);
+        case "el-form-time-picker":
+            define.component = FormTimePicker;
+            return node.define(define);
+        case "el-form-time-select":
+            define.component = FormTimeSelect;
+            return node.define(define);
+        case "el-form-select":
+            define.component = FormSelect;
+            define.props.push("options");
+            return node.define(define);
+        case "el-form-checkbox":
+            define.component = FormCheckbox;
+            define.props.push("options");
+            return node.define(define);
+        case "el-form-rate":
+            define.component = FormRate;
+            return node.define(define);
+        case "el-form-switch":
+            define.component = FormSwitch;
+            return node.define(define);
+        case "el-form-input-number":
+            define.component = FormInputNumber;
+            return node.define(define);
+        case "el-form-radio-group":
+            define.props.push("options");
+            define.component = FormRadioGroup;
+            return node.define(define);
+        case "el-form-slider":
+            define.component = FormSlider;
+            return node.define(define);
+        case "el-form-color-picker":
+            define.component = FormColorPicker;
+            return node.define(define);
+        case "el-form-upload":
+            define.component = FormUpload;
+            return node.define(define);
+        case "el-form-date-range-picker":
+            define.component = FormDateRangePicker;
+            return node.define(define);
+        case "el-form-transfer":
+            define.component = FormTransfer;
+            define.props.push("data");
+            return node.define(define);
+
+    }
+
+}
+
 export const createElementPlugin = (): FormKitPlugin => {
 
     return (node) => {
-        switch (node.props.type) {
-            case "elTransfer":
+        let type = node.props.type;
+        type = type.replace(/[A-Z]/g, (m: string) => "-" + m.toLowerCase());
+
+        switch (type) {
+            case "el-transfer":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormTransfer");
+                }
                 return node.define(createInput(Transfer, {
                     props: ["data"]
                 }));
-            case "elDateRangePicker":
+            case "el-date-range-picker":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormDateRangePicker");
+                }
                 return node.define(createInput(DateRangePicker));
-            case "elCascader":
+            case "el-cascader":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormCascader");
+                }
                 return node.define(createInput(Cascader));
-            case "elInput":
+            case "el-input":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormInput");
+                }
                 return node.define(createInput(Input));
-            case "elSwitch":
+            case "el-switch":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormSwitch");
+                }
+
                 return node.define(createInput(Switch));
-            case "elTextarea":
+            case "el-textarea":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormTextarea");
+                }
                 return node.define(createInput(Textarea))
-            case "elPassword":
+
+            case "el-password":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormPassword");
+                }
+
                 return node.define(createInput(Password))
-            case "elDatePicker":
+            case "el-date-picker":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormDatePicker");
+                }
                 return node.define(createInput(DatePicker))
-            case "elTimePicker":
+
+            case "el-time-picker":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormTimePicker");
+                }
                 return node.define(createInput(TimePicker))
-            case "elColorPicker":
+
+            case "el-color-picker":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormColorPicker");
+                }
                 return node.define(createInput(ColorPicker))
-            case "elInputNumber":
+
+            case "el-input-number":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormInputNumber");
+                }
                 return node.define(createInput(InputNumber))
-            case "elCheckbox":
+
+            case "el-checkbox":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormCheckbox");
+                }
                 return node.define(createInput(Checkbox));
-            case "elSlider":
+
+            case "el-slider":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormSlider");
+                }
                 return node.define(createInput(Slider));
-            case "elTimeSelect":
+
+            case "el-time-select":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormTimeSelect");
+                }
                 return node.define(createInput(TimeSelect));
-            case "elUpload":
+
+            case "el-upload":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormUpload");
+                }
                 return node.define(createInput(Upload));
-            case "elAutocomplete":
+
+            case "el-autocomplete":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormAutocomplete");
+                }
                 return node.define(createInput(Autocomplete));
-            case "elRate":
+            case "el-rate":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormRate");
+                }
                 return node.define(createInput(Rate));
-            case "elSelect":
+            case "el-select":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormSelect");
+                }
                 return node.define(createInput(Select, {
                     props: ["options"]
                 }));
-            case "elRadioGroup":
+
+            case "el-radio-group":
+                if (node.props.attrs["form-item"] !== undefined) {
+                    return getFormItemComponent(node, "elFormRadioGroup");
+                }
                 return node.define(createInput(RadioGroup, {
                     props: ["options"]
                 }));
-            case "elForm":
+
+            case "el-form":
                 let n = node.define({
                     type: "group",
                     component: Form,
@@ -102,116 +243,10 @@ export const createElementPlugin = (): FormKitPlugin => {
 
                 });
                 return n;
-
-            case "elFormPassword":
-                return node.define({
-                    type: "input",
-                    component: FormPassword,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormInput":
-                return node.define({
-                    type: "input",
-                    component: FormInput,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormDatePicker":
-                return node.define({
-                    type: "input",
-                    component: FormDatePicker,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormTextarea":
-                return node.define({
-                    type: "input",
-                    component: FormTextarea,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormSelect":
-                return node.define({
-                    type: "input",
-                    component: FormSelect,
-                    props: ["options", "labelWidth", "labelPosition"]
-                });
-            case "elFormCheckbox":
-                return node.define({
-                    type: "input",
-                    component: FormCheckbox,
-                    props: ["options", "labelWidth", "labelPosition"]
-                });
-            case "elFormRate":
-                return node.define({
-                    type: "input",
-                    component: FormRate,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormSwitch":
-                return node.define({
-                    type: "input",
-                    component: FormSwitch,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormTimePicker":
-                return node.define({
-                    type: "input",
-                    component: FormTimePicker,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormTimeSelect":
-                return node.define({
-                    type: "input",
-                    component: FormTimeSelect,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormInputNumber":
-                return node.define({
-                    type: "input",
-                    component: FormInputNumber,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormRadioGroup":
-                return node.define({
-                    type: "input",
-                    component: FormRadioGroup,
-                    props: ["options", "labelWidth", "labelPosition"]
-                });
-            case "elFormSlider":
-                return node.define({
-                    type: "input",
-                    component: FormSlider,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormColorPicker":
-                return node.define({
-                    type: "input",
-                    component: FormColorPicker,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormItem":
-                return node.define({
-                    type: "input",
-                    component: FormItem,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormUpload":
-                return node.define({
-                    type: "input",
-                    component: FormUpload,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormDateRangePicker":
-                return node.define({
-                    type: "input",
-                    component: FormDateRangePicker,
-                    props: ["labelWidth", "labelPosition"]
-                });
-            case "elFormTransfer":
-                return node.define({
-                    type: "input",
-                    component: FormTransfer,
-                    props: ["data", "labelWidth", "labelPosition"]
-                });
-
         }
+
+        return getFormItemComponent(node, node.props.type);
     }
+
+
 };
