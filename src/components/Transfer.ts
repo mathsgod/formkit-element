@@ -1,32 +1,36 @@
 import { ElTransfer } from 'element-plus';
-import { defineComponent, h, ref } from 'vue'
+import { defineComponent, h, computed } from 'vue'
 
 export default defineComponent({
     props: ["context"],
     setup(props, { slots }) {
-        props.context.classes.inner = "";
+        if (props.context.classes.inner == "formkit-inner") {
+            props.context.classes.inner = "";
+        }
 
         if (props.context.classes.wrapper === "formkit-wrapper") {
             props.context.classes.wrapper = "";
         }
 
-        let v = ref(props.context.node.value);
-        props.context.node.on("input", (val: any) => {
-            v.value = val.payload;
-        })
+        const value = computed({
+            get() {
+                return props.context.value;
+            },
+            set(val) {
+                props.context.node.input(val);
+            }
+        });
 
-        
 
         return () => {
             return h(ElTransfer, {
-                modelValue: v.value,
+                modelValue: value.value,
                 "onUpdate:modelValue": (val: any) => {
-                    props.context.node.input(val);
-                    v.value = val;
+                    value.value = val;
                 },
                 data: props.context.data,
                 ...props.context.attrs
-            },props.context.slots);
+            }, props.context.slots);
         }
     }
 });
