@@ -22,7 +22,7 @@ let onClickSubmit2 = () => {
     <pre wrap>{{ data }}</pre>
 
     <FormKit type="elForm" v-model="data" :submit="onClickSubmit" label-position="top">
-        <FormKit type="elFormInput" label="Name abcdef" name="name" validation="required" />
+        <FormKit type="elFormInput" label="Name abcdef" name="name" validation="required"/>
         <FormKit type="elFormInput" label="Code" name="code" />
         <FormKit type="elFormTextarea" label="Remark" name="remark" />
 

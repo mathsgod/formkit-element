@@ -2,8 +2,6 @@
 import { ref } from 'vue'
 let props = defineProps(["context"]);
 
-//props.context.classes.inner = "";
-
 let error = ref(null);
 function showErrorMessage() {
     let messagesArray = Object.entries(props.context.messages);

@@ -6,8 +6,6 @@ import CheckBox from './CheckBox'
 export default defineComponent({
     props: ["context"],
     setup(props) {
-        props.context.classes.inner = "";
-
         return () => {
             return h(FormItem, {
                 context: props.context

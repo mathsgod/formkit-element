@@ -6,7 +6,6 @@ import Upload from './Upload'
 export default defineComponent({
     props: ["context"],
     setup(props, { slots }) {
-        props.context.classes.inner = "";
 
         let children: any = [];;
         if (slots) {

@@ -6,7 +6,7 @@ import Rate from './Rate'
 export default defineComponent({
     props: ["context"],
     setup(props) {
-        props.context.classes.inner = "";
+
 
         return () => {
             return h(FormItem, {

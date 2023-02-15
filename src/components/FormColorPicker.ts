@@ -6,7 +6,6 @@ import ColorPicker from './ColorPicker'
 export default defineComponent({
     props: ["context"],
     setup(props) {
-        props.context.classes.inner = "";
 
         return () => {
             return h(FormItem, {
