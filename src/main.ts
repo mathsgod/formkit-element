@@ -44,6 +44,7 @@ let router = createRouter({
         { path: '/transfer', component: () => import('./pages/transfer.vue') },
         { path: '/password', component: () => import('./pages/password.vue') },
         { path: '/slots', component: () => import('./pages/slots.vue') },
+        { path: '/tree', component: () => import('./pages/tree.vue') },
     ],
 })
 

@@ -53,9 +53,9 @@ let submitForm = () => {
 
 <template>
   <div>
-    <FormKit type="elForm" v-model="data" :submit="submitForm">
-      <FormKit type="elInput" name="input1" label="elInput" />
-      <FormKit type="elUpload" name="input2" label="elUpload">
+    <FormKit type="el-form" v-model="data" :submit="submitForm">
+      <FormKit type="el-input" name="input1" label="elInput" />
+      <FormKit type="el-upload" name="input2" label="elUpload">
         <el-button size="small" type="primary">Click to upload</el-button>
         <template #tip>
           <div class="el-upload__tip">
@@ -74,17 +74,17 @@ let submitForm = () => {
 
     <FormKit type="form" v-model="data">
 
-      <FormKit type="elInput" name="input4" label="elInput" validation="required" help="this is input help" />
+      <FormKit type="el-input" name="input4" label="elInput" validation="required" help="this is input help" />
 
-      <FormKit type="elInput" name="input5" label="elInput (placeholder)" validation="required"
+      <FormKit type="el-input" name="input5" label="elInput (placeholder)" validation="required"
         placeholder="this is a placeholder" clearable />
 
-      <FormKit type="elPassword" name="password1" label="elPassword" validation="required" show-password clearable
+      <FormKit type="el-password" name="password1" label="elPassword" validation="required" show-password clearable
         placeholder="this is a password" />
 
-      <FormKit type="elTextarea" name="textarea" label="elTextarea" placeholder="this is a textarea" />
+      <FormKit type="el-textarea" name="textarea" label="elTextarea" placeholder="this is a textarea" />
 
-      <FormKit type="elSelect" name="select2" label="elSelect" clearable :options="{
+      <FormKit type="el-select" name="select2" label="el-select" clearable :options="{
         mercury: 'Mercury',
         venus: 'Venus',
         earth: 'Earth',
@@ -95,7 +95,7 @@ let submitForm = () => {
         neptune: 'Neptune'
       }" />
 
-      <FormKit type="elSelect" name="select2" label="elSelect (multiple)" :options="{
+      <FormKit type="el-select" name="select2" label="el-select (multiple)" :options="{
         mercury: 'Mercury',
         venus: 'Venus',
         earth: 'Earth',
@@ -106,21 +106,32 @@ let submitForm = () => {
         neptune: 'Neptune'
       }" multiple />
 
-      <FormKit type="elRate" name="rate2" label="elRate" />
+      <FormKit type="el-rate" name="rate2" label="elRate" />
 
-      <FormKit type="elSwitch" name="switch3" label="elSwitch" />
+      <FormKit type="el-switch" name="switch3" label="elSwitch" />
 
-      <FormKit type="elDatePicker" name="date3" label="elDatePicker" />
+      <FormKit type="el-date-picker" name="date3" label="elDatePicker" />
 
-      <FormKit type="elDateRangePicker" name="dateRangePicker1" label="elDateRangePicker1" />
+      <FormKit type="el-date-range-picker" name="dateRangePicker1" label="elDateRangePicker1" />
 
-      <FormKit type="elTimePicker" name="time2" label="elTimePicker" />
+      <FormKit type="el-time-picker" name="time2" label="elTimePicker" />
 
       <FormKit type="elColorPicker" name="color12" label="elColorPicker" />
 
       <FormKit type="elInputNumber" name="inputNumber2" label="elInputNumber" />
 
       <FormKit type="elCheckbox" name="cb5" label="elCheckbox" />
+
+      <FormKit type="el-checkbox-group" name="cbg1" label="el-checkbox-group" :options="{
+        mercury: 'Mercury',
+        venus: 'Venus',
+        earth: 'Earth',
+        mars: 'Mars',
+        jupiter: 'Jupiter',
+        saturn: 'Saturn',
+        uranus: 'Uranus',
+        neptune: 'Neptune',
+      }" />
 
       <FormKit type="elSlider" name="slider2" label="elSlider" />
 
@@ -147,6 +158,7 @@ let submitForm = () => {
         <div slot="tip" class="el-upload__tip">only jpg/png files are allowed</div>
       </FormKit>
 
+
     </FormKit>
 
 
@@ -155,20 +167,20 @@ let submitForm = () => {
 
     <el-divider>Component with form Item</el-divider>
 
-    <FormKit type="elForm" v-model="obj">
-        <FormKit type="elFormInput" label="Name abcdef" name="name" validation="required" />
-        <FormKit type="elFormInput" label="Code" name="code" />
-        <FormKit type="elFormTextarea" label="Remark" name="remark" />
+    <FormKit type="el-form" label-width="auto" v-model="obj">
+      <FormKit type="el-input" form-item label="Name abcdef" name="name" validation="required" />
+      <FormKit type="el-input" form-item label="Code" name="code" />
+      <FormKit type="el-textarea" form-item label="Remark" name="remark" />
     </FormKit>
-    
-    <FormKit type="elForm" label-width="auto" submit-label="OK" v-model="data2">
 
-      <FormKit type="elFormInput" label="elFormInput" name="form_input_1" validation="required"
+    <FormKit type="el-form" label-width="auto" submit-label="OK" v-model="data2">
+
+      <FormKit type="el-input" form-item label="elFormInput" name="form_input_1" validation="required"
         placeholder="this is el-form-input" clearable help="this is input help" />
-      <FormKit type="elFormPassword" label="elFormPassword" name="form_password" validation="required" clearable
+      <FormKit type="el-password" form-item label="elFormPassword" name="form_password" validation="required" clearable
         show-password help="password help" />
 
-      <FormKit type="elFormSelect" label="elFormSelect" name="select" :options="{
+      <FormKit type="el-select" label="el-select" form-item name="select" :options="{
         mercury: 'Mercury',
         venus: 'Venus',
         earth: 'Earth',
@@ -179,17 +191,17 @@ let submitForm = () => {
         neptune: 'Neptune',
       }" validation="required" clearable placeholder="select placeholder" filterable multiple />
 
-      <FormKit type="elFormCheckbox" label="elFormCheckbox" name="cb1" validation="required" />
+      <FormKit type="el-checkbox" form-item label="elFormCheckbox" name="cb1" validation="required" />
 
-      <FormKit type="elFormRate" label="elFormRate" name="rate1" />
-      <FormKit type="elFormSwitch" label="elFormSwitch" name="switch1" />
-      <FormKit type="elFormDatePicker" label="elFormDatePicker" name="date_picker_1" />
-      <FormKit type="elFormTimePicker" label="elFormTimePicker" name="time_picker_1" />
-      <FormKit type="elFormTimeSelect" label="elFormTimeSelect" name="time_select_1" />
+      <FormKit type="el-rate" form-item label="elFormRate" name="rate1" />
+      <FormKit type="el-switch" form-item label="elFormSwitch" name="switch1" />
+      <FormKit type="el-date-picker" form-item label="elFormDatePicker" name="date_picker_1" />
+      <FormKit type="el-time-picker" form-item label="elFormTimePicker" name="time_picker_1" />
+      <FormKit type="el-time-select" form-item label="elFormTimeSelect" name="time_select_1" />
 
-      <FormKit type="elFormInputNumber" label="elFormInputNumber" name="input_number_1" />
+      <FormKit type="el-input-number" form-item label="elFormInputNumber" name="input_number_1" />
 
-      <FormKit type="elFormRadioGroup" label="elFormRadioGroup" name="radio1" :options="{
+      <FormKit type="el-radio-group" label="el-radio-group" name="radio1" form-item :options="{
         mercury: 'Mercury',
         venus: 'Venus',
         earth: 'Earth',
@@ -201,16 +213,27 @@ let submitForm = () => {
       }" validation="required" />
 
 
-      <FormKit type="elFormSlider" label="elFormSlider" name="slider1" />
-      <FormKit type="elFormSlider" label="elFormSlider (with attrs)" name="slider2" :min="100" :max="200" :step="2" />
+      <FormKit type="el-slider" form-item label="elFormSlider" name="slider1" />
+      <FormKit type="el-slider" form-item label="elFormSlider (with attrs)" name="slider2" :min="100" :max="200"
+        :step="2" />
 
-      <FormKit type="elFormColorPicker" label="elFormColorPicker" name="color1" />
+      <FormKit type="el-color-picker" form-item label="elFormColorPicker" name="color1" />
 
-
+      <FormKit type="el-checkbox-group" form-item name="cbg1" label="el-checkbox-group" :options="{
+        mercury: 'Mercury',
+        venus: 'Venus',
+        earth: 'Earth',
+        mars: 'Mars',
+        jupiter: 'Jupiter',
+        saturn: 'Saturn',
+        uranus: 'Uranus',
+        neptune: 'Neptune',
+      }" />
     </FormKit>
 
 
 
+    <FormKit type="el-transfer" form-item name="transfer" label="el-transfer" />
 
     <pre>{{ data2 }}</pre>
 
