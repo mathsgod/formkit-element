@@ -1,16 +1,22 @@
 import { ElRadioGroup, ElRadio } from 'element-plus';
-import { defineComponent, h, ref } from 'vue'
+import { defineComponent, h, computed } from 'vue'
 import { normalizeOptions } from "@formkit/inputs";
 
 export default defineComponent({
     props: ["context"],
     setup(props) {
-        props.context.classes.inner = "";
+        if (props.context.classes.inner == "formkit-inner") {
+            props.context.classes.inner = "";
+        }
 
-        let v = ref(props.context.node.value);
-        props.context.node.on("input", (val: any) => {
-            v.value = val.payload;
-        })
+        const value = computed({
+            get() {
+                return props.context.value;
+            },
+            set(val) {
+                props.context.node.input(val);
+            }
+        });
 
         let options = normalizeOptions(props.context.node.props.options ?? []);
 
@@ -23,10 +29,9 @@ export default defineComponent({
 
         return () => {
             return h(ElRadioGroup, {
-                modelValue: v.value,
+                modelValue: value.value,
                 "onUpdate:modelValue": (val: any) => {
-                    props.context.node.input(val);
-                    v.value = val;
+                    value.value = val;
                 },
                 onBlur() {
                     props.context.handlers.blur()
