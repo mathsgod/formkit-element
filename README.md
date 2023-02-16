@@ -43,17 +43,16 @@ app.use(plugin, defaultConfig({
 ```html
   <FormKit type="form" v-model="data">
 
-      <FormKit type="elInput" name="input4" label="elInput" validation="required" />
+      <FormKit type="el-input" name="input4" label="el-input" validation="required" />
 
-      <FormKit type="elInput" name="input5" label="elInput (placeholder)" validation="required"
+      <FormKit type="el-input" name="input5" label="el-input (placeholder)" validation="required"
         placeholder="this is a placeholder" clearable />
 
-      <FormKit type="elPassword" name="password1" label="elPassword" validation="required" show-password clearable
-        placeholder="this is a password" />
+      <FormKit type="el-password" name="password1" label="el-password" validation="required" show-password clearable placeholder="this is a password" />
 
-      <FormKit type="elTextarea" name="textarea" label="elTextarea" placeholder="this is a textarea" />
+      <FormKit type="el-textarea" name="textarea" label="el-textarea" placeholder="this is a textarea" />
 
-      <FormKit type="elSelect" name="select2" label="elSelect" clearable :options="{
+      <FormKit type="el-select" name="select2" label="el-select" clearable :options="{
         mercury: 'Mercury',
         venus: 'Venus',
         earth: 'Earth',
@@ -64,7 +63,7 @@ app.use(plugin, defaultConfig({
         neptune: 'Neptune'
       }" />
 
-      <FormKit type="elSelect" name="select2" label="elSelect (multiple)" :options="{
+      <FormKit type="el-select" name="select2" label="el-select (multiple)" :options="{
         mercury: 'Mercury',
         venus: 'Venus',
         earth: 'Earth',
@@ -75,18 +74,18 @@ app.use(plugin, defaultConfig({
         neptune: 'Neptune'
       }" multiple />
 
-      <FormKit type="elRate" name="rate2" label="elRate" />
+      <FormKit type="el-rate" name="rate2" label="el-rate" />
 
-      <FormKit type="elSwitch" name="switch3" label="elSwitch" />
+      <FormKit type="el-switch" name="switch3" label="el-switch" />
 
-      <FormKit type="elDatePicker" name="date3" label="elDatePicker" />
-      <FormKit type="elTimePicker" name="time2" label="elTimePicker" />
-      <FormKit type="elColorPicker" name="color12" label="elColorPicker" />
+      <FormKit type="el-date-picker" name="date3" label="el-date-picker" />
+      <FormKit type="el-time-picker" name="time2" label="el-time-picker" />
+      <FormKit type="el-color-picker" name="color12" label="el-color-picker" />
     </FormKit>
 ```
 
-
-
+<p>
+When using attributes `form-item` the component will be wrapped in a <a href="https://element-plus.org/en-US/component/form.html">el-form-item</a> component.
 
 #### el-form-item preivew
 
@@ -94,10 +93,10 @@ app.use(plugin, defaultConfig({
 
 
 ```typescript
- <FormKit type="elForm" v-model="data" ref="elf" id="elform">
-      <FormKit type="elFormInput" label="input3" name="input3" validation="required" placeholder="testing3" clearable />
+ <FormKit type="el-form" v-model="data" ref="elf" id="elform">
+      <FormKit type="el-input" label="input3" name="input3" validation="required" placeholder="testing3" clearable form-item />
 
-<FormKit type="elFormSelect" label="Select" name="select" :options="{
+      <FormKit type="el-select" label="Select" name="select" :options="{
         mercury: 'Mercury',
         venus: 'Venus',
         earth: 'Earth',
@@ -106,16 +105,17 @@ app.use(plugin, defaultConfig({
         saturn: 'Saturn',
         uranus: 'Uranus',
         neptune: 'Neptune',
-      }" validation="required" clearable placeholder="select placeholder" filterable multiple />
+      }" 
+      validation="required" clearable placeholder="select placeholder" filterable multiple form-item />
 
-      <FormKit type="elFormCheckbox" label="Checkbox1" name="cb1" validation="required" />
+      <FormKit type="el-checkbox" label="Checkbox1" name="cb1" validation="required" form-item/>
 
-      <FormKit type="elFormRate" label="Rate" name="rate1" />
-      <FormKit type="elFormSwitch" label="Switch" name="switch1" />
-      <FormKit type="elFormTimePicker" label="Time Picker 1" name="time_picker_1" />
-      <FormKit type="elFormInputNumber" label="input nubmer 1" name="input_number_1" />
+      <FormKit type="el-rate" label="Rate" name="rate1" form-item/>
+      <FormKit type="el-switch" label="Switch" name="switch1" form-item/>
+      <FormKit type="el-time-picker" label="Time Picker 1" name="time_picker_1" form-item/>
+      <FormKit type="el-input-number" label="input nubmer 1" name="input_number_1" form-item/>
 
-      <FormKit type="elFormRadioGroup" label="Radio Group" name="radio1" :options="{
+      <FormKit type="el-radio-group" label="Radio Group" name="radio1" :options="{
         mercury: 'Mercury',
         venus: 'Venus',
         earth: 'Earth',
@@ -124,13 +124,13 @@ app.use(plugin, defaultConfig({
         saturn: 'Saturn',
         uranus: 'Uranus',
         neptune: 'Neptune',
-      }" validation="required" />
+      }" validation="required" form-item/>
 
 
-      <FormKit type="elFormSlider" label="Slider1" name="slider1" />
-      <FormKit type="elFormSlider" label="Slider2" name="slider2" :min="100" :max="200" :step="2" />
+      <FormKit type="el-slider" label="Slider1" name="slider1" />
+      <FormKit type="el-slider" label="Slider2" name="slider2" :min="100" :max="200" :step="2" />
 
-      <FormKit type="elFormColorPicker" label="ColorPicker" name="color1" />
+      <FormKit type="el-color-picker" label="ColorPicker" name="color1" />
 
 
     </FormKit>
@@ -139,31 +139,31 @@ app.use(plugin, defaultConfig({
 
 ### Supported type
 <details>
-  <summary>elCascader</summary>
+  <summary>el-cascader</summary>
 <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elCascader.png"/>
 </details>
 
 <details>
-  <summary>elRate</summary>
+  <summary>el-rate</summary>
 <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elRate.png"/>
 
 ```html
 <FormKit type="form" v-model="data">
-    <FormKit type="elFormRate" label="elFormRate" name="rate" />
+    <FormKit type="el-rate" label="elFormRate" name="rate" form-item/>
 
-    <FormKit type="elRate" label="elRate" name="rate" help="help text" />
+    <FormKit type="el-rate" label="elRate" name="rate" help="help text" />
 
-    <FormKit type="elRate" label="elRate" name="rate" :texts="['oops', 'disappointed', 'normal', 'good', 'great']"
+    <FormKit type="el-rate" label="elRate" name="rate" :texts="['oops', 'disappointed', 'normal', 'good', 'great']"
         show-text />
 
-    <FormKit type="elRate" label="elRate (allow-half)" name="rate_half" allow-half />
+    <FormKit type="el-rate" label="elRate (allow-half)" name="rate_half" allow-half />
 </FormKit>
 ```
 
 </details>
 
 <details>
-  <summary>elSelect</summary>
+  <summary>el-select</summary>
   <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elSelect.png"/>
 
 Custom template of select options
@@ -201,7 +201,7 @@ const cities = [
 
 </script>
 <template>
-  <FormKit type="elSelect" label="select (Custom template)" name="input1" :options="cities">
+  <FormKit type="el-select" label="select (Custom template)" name="input1" :options="cities">
       <template #option="{ item }">
           <span style="float: left">{{ item.label }}</span>
           <span style="
@@ -218,47 +218,47 @@ const cities = [
 </details>
 
 <details>
-  <summary>elDatePicker and elDateRangePicker</summary>  
+  <summary>el-date-picker and el-date-range-picker</summary>  
 <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elDatePicker.png"/>
 
 ```html
 <FormKit type="group" v-model="data">
-  <FormKit type="elDatePicker" label="elDatePicker" name="date1" validation="required" />
-  <FormKit type="elDateRangePicker" label="elDateRangePicker" name="date2" />
+  <FormKit type="el-date-picker" label="el-date-picker" name="date1" validation="required" />
+  <FormKit type="el-date-range-picker" label="el-date-range-picker" name="date2" />
 </FormKit>
 ```
 
 </details>
 
 <details>
-  <summary>elSwitch</summary>  
+  <summary>el-switch</summary>  
 <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elSwitch.png"/>
 
 ```html
     <FormKit type="group" v-model="data">
-        <FormKit type="elSwitch" label="elSwitch" name="switch1" />
-        <FormKit type="elSwitch" label="elSwitch (size)" name="switch2" size="large" />
-        <FormKit type="elSwitch" name="swtich3" active-text="Pay by month" inactive-text="Pay by year" />
+        <FormKit type="el-switch" label="el-switch" name="switch1" />
+        <FormKit type="el-switch" label="el-switch (size)" name="switch2" size="large" />
+        <FormKit type="el-switch" name="swtich3" active-text="Pay by month" inactive-text="Pay by year" />
     </FormKit>
 ```
 
 </details>
 
 <details>
-  <summary>elTimePicker</summary>
+  <summary>el-time-picker</summary>
 <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elTimePicker.png"/>
 
 ```html
 <FormKit type="group" v-model="data">
-  <FormKit type="elTimePicker" label="elTimePicker" name="time1" />
-  <FormKit type="elTimePicker" label="elTimePicker (range)" name="time2" is-range />
+  <FormKit type="el-time-picker" label="el-time-picker" name="time1" />
+  <FormKit type="el-time-picker" label="el-time-picker (range)" name="time2" is-range />
 </FormKit>
 ```
 
 </details>
 
 <details>
-  <summary>elAutocomplete</summary>
+  <summary>el-autocomplete</summary>
 <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elAutocomplete.png"/>
 
 ```html
@@ -297,7 +297,7 @@ let querySearch = (queryString, cb) => {
 
     <pre wrap>{{ data }}</pre>
     <FormKit type="group" v-model="data">
-        <FormKit type="elAutocomplete" label="elAutocomplete" name="value1" placeholder="Please Input"
+        <FormKit type="el-autocomplete" label="el-autocomplete" name="value1" placeholder="Please Input"
             :fetch-suggestions="querySearch" />
     </FormKit>
 
@@ -309,7 +309,7 @@ let querySearch = (queryString, cb) => {
 </details>
 
 <details>
-  <summary>elUpload</summary>
+  <summary>el-upload</summary>
 <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/elUpload.png"/>
 
 ```html
@@ -321,11 +321,11 @@ const data = ref({})
 <template>
     <pre wrap>{{ data }}</pre>
     <FormKit type="group" v-model="data">
-        <FormKit type="elUpload" label="elUpload" name="upload">
+        <FormKit type="el-upload" label="elUpload" name="upload">
             <el-button type="primary" size="small">select file</el-button>
         </FormKit>
 
-        <FormKit type="elFormUpload" label="elFormUpload" name="upload1">
+        <FormKit type="el-upload" label="elFormUpload" name="upload1" form-item>
             <el-button type="primary" size="small">select file</el-button>
         </FormKit>
     </FormKit>
@@ -335,40 +335,22 @@ const data = ref({})
 </details>
 
 
-- elCheckbox
-- elColorPicker
-- elInput
-- elInputNumber
-- elPassword
-- elRadioGroup
-- elSlider
-- elTextarea 
-- elTimeSelect
-- elForm
-- elTransfer
+- el-checkbox
+- el-color-picker
+- el-input
+- el-input-number
+- el-password
+- el-radio-group
+- el-slider
+- el-textarea 
+- el-time-select
+- el-form
+- el-transfer
 
-
-#### Component with el-form-item
-- elFormCheckbox
-- elFormColorPicker
-- elFormDatePicker
-- elFormDateRangePicker
-- elFormInput
-- elFormInputNumber
-- elFormPassword
-- elFormRadioGroup
-- elFormRate
-- elFormSelect
-- elFormSwitch
-- elFormTextarea
-- elFormTimePicker
-- elFormTimeSelect
-- elFormSlider
-- elFormTransfer
 
 ### elForm submit
 
-Due to the limitation of vue3, the submit event of elForm is not supported. You can use the submit attribute of FormKit to submit the form.
+Due to the limitation of vue3, the submit event of el-form is not supported. You can use the submit attribute of FormKit to submit the form.
 
 ```typescript
 const data=ref({})
@@ -379,7 +361,7 @@ let onSubmit=()=>{
 ```
 
 ```html
-  <FormKit type="elForm" v-model="data" :submit="onSubmit">
+  <FormKit type="el-form" v-model="data" :submit="onSubmit">
     ...   
   </FormKit>
 ```
