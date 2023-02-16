@@ -6,6 +6,7 @@ export default (component: Component, definitionOptions?: Partial<FormKitTypeDef
     return {
         type: "input",
         props: ["labelWidth", "labelPosition", ...definitionOptions?.props ?? []],
+        features: definitionOptions?.features ?? [],
         component: defineComponent({
             props: ["context"],
             setup(props, { slots }) {

@@ -26,7 +26,7 @@ export default defineComponent({
             if (props.context.slots?.option) {
 
                 return h(ElOption, {
-                    value: option.value,
+                    value: option.__original ?? option.value,
                 }, props.context.slots.option({
                     item: option
                 }));
@@ -35,7 +35,7 @@ export default defineComponent({
 
                 return h(ElOption, {
                     label: option.label,
-                    value: option.value
+                    value: option.__original ?? option.value
                 })
             }
         })

@@ -16,8 +16,7 @@ export default defineComponent({
                 props.context.node.input(val);
             }
         });
-        console.log(value);
-
+        
 
         return () => {
             return h(ElTreeSelect, {

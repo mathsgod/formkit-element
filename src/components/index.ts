@@ -89,7 +89,7 @@ export const createElementPlugin = (): FormKitPlugin => {
                 return node.define(create(Rate));
             case "el-select":
                 return node.define(create(Select, {
-                    props: ["options"]
+                    props: ["options"],
                 }));
             case "el-radio-group":
                 return node.define(create(RadioGroup, {
@@ -110,7 +110,7 @@ export const createElementPlugin = (): FormKitPlugin => {
                 return n;
         }
 
-       
+
     }
 
 

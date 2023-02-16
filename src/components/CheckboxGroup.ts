@@ -23,7 +23,7 @@ export default defineComponent({
         let OptionComponents = options.map((option: any) => {
             return h(ElCheckbox, {
                 label: option.label,
-                value: option.value
+                value: option.__original ?? option.value
             })
         })
 
