@@ -381,8 +381,7 @@ let data = [{
 </template>
 
 ```
-
-
+</details>
 
 
 
