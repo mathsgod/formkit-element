@@ -22,6 +22,7 @@ import DateRangePicker from './DateRangePicker'
 import Transfer from './Transfer'
 import CheckboxGroup from './CheckboxGroup';
 import Tree from './Tree';
+import TreeSelect from './TreeSelect';
 
 import createFormItemInput from './createFormItemInput';
 
@@ -96,6 +97,8 @@ export const createElementPlugin = (): FormKitPlugin => {
                 }));
             case "el-tree":
                 return node.define(create(Tree));
+            case "el-tree-select":
+                return node.define(create(TreeSelect));
             case "el-form":
                 let n = node.define({
                     type: "group",
