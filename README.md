@@ -339,6 +339,53 @@ const data = ref({})
 </details>
 
 
+<details>
+  <summary>el-tree-select</summary>
+  <img src="https://raw.githubusercontent.com/mathsgod/formkit-element/main/preview/el-tree-select.png"/>
+
+```html
+<script setup>
+import { ref } from 'vue'
+let form = ref({})
+
+let data = [{
+    label: "Level one 1",
+    value: 1,
+
+    children: [{
+        label: "Level two 1-1",
+        value: 2,
+        children: [{
+            label: "Level three 1-1-1",
+            value: 3
+        }, {
+            label: "Level three 1-1-2",
+            value: 4
+        }, {
+            label: "Level three 1-1-3",
+            value: 5
+        }]
+    }]
+
+}]
+</script>
+
+<template>
+    <form-kit type="form" v-model="form">
+        <form-kit type="el-tree-select" name="treeselect" :data="data" label="el-tree-select" :render-after-expand="false" />
+
+        <form-kit type="el-tree-select" name="treeselect2" :data="data" label="el-tree-select (checkbox)" show-checkbox :render-after-expand="false" />
+
+        <form-kit type="el-tree-select" name="treeselect3" :data="data" label="el-tree-select (multiple)" multiple :render-after-expand="false" />
+    </form-kit>
+</template>
+
+```
+
+
+
+
+
 - el-checkbox
 - el-color-picker
 - el-input
