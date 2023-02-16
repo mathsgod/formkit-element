@@ -10,12 +10,16 @@ Most of the components are based on <a href="https://element-plus.org/">Element 
 
 ## Setup
 
+<p>
 1. This library require <a href="https://element-plus.org/">Element plus</a> and <a href="https://formkit.com/">FormKit</a> to be installed.
+</p>
 
 If you are using nuxt, you can use <a href="https://formkit.com/essentials/installation">FormKit nuxt module</a> to install FormKit.
 
-
+<p>
 2. Create formkit.config.ts if using nuxt
+</p>
+
 ```typescript
 import { DefaultConfigOptions } from '@formkit/vue'
 import { createElementPlugin } from 'formkit-element'
@@ -25,7 +29,7 @@ const config: DefaultConfigOptions = {
 }
 ```
 
-3. or direct setup in main.ts
+1. or direct setup in main.ts
 ```typescript
 const app = createApp(App);
 
@@ -346,9 +350,11 @@ const data = ref({})
 - el-time-select
 - el-form
 - el-transfer
+- el-checkbox-group
+- el-tree
 
 
-### elForm submit
+### el-form submit
 
 Due to the limitation of vue3, the submit event of el-form is not supported. You can use the submit attribute of FormKit to submit the form.
 
