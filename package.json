@@ -29,7 +29,6 @@
   "files": [
     "dist"
   ],
-  "module1": "./dist/formkit-element.js",
-  "module": "./src/components/index.ts",
+  "module": "./dist/formkit-element.js",
   "license": "MIT"
 }
