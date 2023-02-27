@@ -20,11 +20,11 @@ export default defineComponent({
 
         let options = normalizeOptions(props.context.node.props.options ?? []);
 
+        console.log(options);
         let OptionComponents = options.map((option: any) => {
             return h(ElRadio, {
-                label: option.label,
-                value: option.__original ?? option.value
-            })
+                label: option.__original ?? option.value,
+            }, option.label)
         })
 
         return () => {

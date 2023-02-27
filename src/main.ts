@@ -45,6 +45,7 @@ let router = createRouter({
         { path: '/password', component: () => import('./pages/password.vue') },
         { path: '/slots', component: () => import('./pages/slots.vue') },
         { path: '/tree', component: () => import('./pages/tree.vue') },
+        { path: '/radio', component: () => import('./pages/radio.vue') },
     ],
 })
 
