@@ -24,7 +24,9 @@ export default defineComponent({
         let OptionComponents = options.map((option: any) => {
             return h(ElRadio, {
                 label: option.__original ?? option.value,
-            }, option.label)
+            }, () => {
+                return option.label
+            })
         })
 
         return () => {
