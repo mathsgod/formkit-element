@@ -12,18 +12,18 @@
     "release": "npm version patch && npm run build && npm publish"
   },
   "dependencies": {
-    "vue": "^3.2.37"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@element-plus/icons-vue": "^2.0.10",
-    "@formkit/themes": "^1.0.0-beta.15",
-    "@formkit/vue": "^1.0.0-beta.15",
+    "@element-plus/icons-vue": "^2.1.0",
+    "@formkit/themes": "^0.17.2",
+    "@formkit/vue": "^0.17.2",
     "@vitejs/plugin-vue": "^3.1.0",
-    "element-plus": "^2.2.19",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0",
+    "element-plus": "^2.3.5",
+    "typescript": "^4.9.5",
+    "vite": "^3.2.6",
     "vite-plugin-dts": "^1.7.0",
-    "vue-router": "^4.1.6",
+    "vue-router": "^4.2.1",
     "vue-tsc": "^0.40.4"
   },
   "files": [

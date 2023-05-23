@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from "vue";
 const data = ref({
-    input1: "hello"
+    input1: "hello",
+    input2: "input2"
 })
 
 
@@ -31,7 +32,7 @@ let schema = [
             <form-kit type="el-input" name="input2" label="B" id="b"></form-kit>
 
             <form-kit type="el-input" name="input1" label="Form item input 2" validation="required"></form-kit>
-            <form-kit type="elInput" name="input3" label="form item input"></form-kit>
+            <form-kit type="el-input" name="input3" label="form item input"></form-kit>
         </el-form>
     </form-kit>
 
@@ -54,7 +55,4 @@ let schema = [
         <FormKit type="elFormTextarea" label="elFormTextarea" name="textarea1" validation="required" help="help" />
     </FormKit>
  -->
-
-
-
 </template>
